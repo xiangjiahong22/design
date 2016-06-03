@@ -1,0 +1,6 @@
+.layui-layer{border:2px solid #ffc641;border-radius: 3px;background: url(../../../img/homeLoginBg.jpg) #fff no-repeat center bottom;}
+.layui-layer-setwin .layui-layer-close2{background: url(../../../img/layerClose.png) #fff no-repeat center center;width: 32px;
+	height: 32px;border:2px solid #ffc641;border-radius: 100%;transition:0.5s;}
+.layui-layer-setwin .layui-layer-close2:hover{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);background-position:center center}
+
+

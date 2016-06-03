@@ -1,0 +1,549 @@
+<html>
+<head>
+  <title>服装定制</title>
+  <meta charset="utf-8">
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+  <script type="text/javascript" src="js/html5upload.js"></script>
+  <script type="text/javascript" src="js/jquery.design.js"></script>
+  <script type="text/javascript" src="js/html2canvas.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="header">
+  <div class="topBar">
+    <div class="leftInfo">
+      <a href="javascript:void(0)">简体中文</a><em>|</em>
+      <a href="javascript:void(0)">English</a><em>|</em>
+      <a href="#">帮助</a>
+    </div>
+    <div class="rightInfo">
+      <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe674;</i>登录</a><em>|</em>
+      <a href="javascript:void(0)" title="注册" class="reg">注册</a>
+      <a href="#"><i class="icon iconfont message" title="新消息">&#xe605;<span class="newMsg"></span></i></a>
+      <a href="#"><i class="icon iconfont cart" title="购物车">&#xe612;</i></a>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="con">
+      <div class="logo"><a href="index.html" title="挑赞网"><img src="img/logo.png" alt="挑赞网"></a></div>
+      <div class="navList">
+        <ul>
+          <li><a href="index.html">购买</a></li>
+          <li><a href="#">挑赞</a></li>
+          <li><a href="contribute.html">投稿</a></li>
+          <li><a href="#" class="active">定制</a></li>
+        </ul>
+      </div>
+      <div class="rightSearch">
+        <form>
+          <input type="text" placeholder="搜索您想要的关键词" class="inp">
+          <input type="submit" class="sub" value="">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="designWrap">
+
+  <div class="design">
+    <div class="left">
+      <div class="designModule">
+        <div class="pullLeft side">
+          <h2>选择服装类别</h2>
+          <ul class="typeChoose">
+            <li class="active">
+              <a href="javascript:void(0)">
+                <p class="icon"><img src="img/men.png"></p>
+                <p class="text">男士</p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p class="icon"><img src="img/women.png"></p>
+                <p class="text">女士</p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p class="icon"><img src="img/kids.png"></p>
+                <p class="text">儿童</p>
+              </a>
+            </li>
+          </ul>
+          <div class="styled-select minSelect">
+            <select>
+              <option>男士T恤</option>
+              <option>女士T恤</option>
+              <option>童装</option>
+            </select>
+          </div>
+          <div class="typeList">
+            <ul>
+              <li>
+                <span style="background:#17462f"></span>
+                <p>墨绿色</p>
+              </li>
+              <li>
+                <span style="background:#d24a3c"></span>
+                <p>桃红色</p>
+              </li>
+              <li>
+                <span style="background:#175e99"></span>
+                <p>英伦蓝色</p>
+              </li>
+              <li>
+                <span style="background:#ff99cd"></span>
+                <p>粉色</p>
+              </li>
+              <li>
+                <span style="background:#f47520"></span>
+                <p>樱桃橙色</p>
+              </li>
+              <li>
+                <span style="background:#00b7ee"></span>
+                <p>天蓝色</p>
+              </li>
+              <li>
+                <span style="background:#17462f"></span>
+                <p>墨绿色</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pullRight rightCon">
+          <div class="topInfo">
+            男士T桖
+            <span class="change"><a href="javascript:void(0)"><i>djf</i>切换背面</a></span>
+          </div>
+          <div  id="uploadWrap" class="uploadWrap" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img class="modulePic" src="img/module1.jpg">
+
+            <img src="img/pastTheme1.jpg" style="position:absolute;left:100px;top:100px;-moz-transform:rotate(45deg);-moz-transform:translateX(100px);-moz-transform:translateY(100px)" id="ab">
+
+          </div>
+        </div>
+      </div>
+      <div class="bot">
+        <div class="designOption">
+          <div class="pullLeft share">
+            <a href="#">保存</a>
+            <a href="#">帮助</a>
+            <a href="#">重置</a>
+            <a href="#">分享</a>
+          </div>
+          
+        </div>
+        <p class="detailsTit">
+          详情描述
+          <span class="pullRight nextStep">
+            <a href="#">下一步</a>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="uploadBtn">
+        <input type="file" name="file" onchange="PreviewImage(this)" id="upload" />
+        <span>上传图片</span>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="搜索关键字" class="inp">
+        <input type="submit" value="df" class="sub">
+      </div>
+      <div class="sample">
+        <ul>
+          <li><img src="img/sample1.jpg" id="sample1" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample2.jpg" id="sample2" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample3.jpg" id="sample3" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample4.jpg" id="sample4" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample5.jpg" id="sample5" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample6.jpg" id="sample6" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample7.jpg" id="sample7" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample8.jpg" id="sample8" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample9.jpg" id="sample9" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample10.jpg" id="sample10" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample11.jpg" id="sample11" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample12.jpg" id="sample12" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample13.jpg" id="sample13" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample14.jpg" id="sample14" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+          <li><img src="img/sample15.jpg" id="sample15" title="卡通可爱" draggable="true" ondragstart="drag(event)"></li>
+        </ul>
+      </div>
+
+      <div class="page">
+        <div class="pullLeft">1/66</div>
+        <div class="pullRight">
+          <span class="flip prev">12</span>
+          <span class="num">2</span>
+          <span class="flip next">12</span>
+        </div>
+      </div>
+
+      <div class="text">
+        <div class="topStyle">
+          <div class="styled-select fontFamily">
+            <select class="fontFamily">
+              <option>微软雅黑</option>
+              <option>宋体</option>
+              <option>Arial</option>
+              <option>Helvetica</option>
+              <option>sans-serif</option>
+            </select>
+          </div>
+          <div class="styled-select fontSize">
+            <select class="fontSize">
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option selected="selected">14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>18</option>
+              <option>20</option>
+              <option>22</option>
+              <option>24</option>
+              <option>26</option>
+              <option>28</option>
+              <option>30</option>
+              <option>36</option>
+              <option>48</option>
+              <option>60</option>
+              <option>72</option>
+            </select>
+          </div>
+          <span class="fontColor"><span class="color"></span></span>
+        </div>
+
+        <textarea class="textZone" placeholder="输入文字"></textarea>
+
+        <a href="javascript:void(0)" class="textSubBtn">确 认</a>
+
+        <div class="colorPanel">
+          <h3>Color <span class="pullRight">df</span></h3>
+          <ul>
+            <li class="active"><a href="javascript:void" style="background:#ffffff"></a></li>
+            <li><a href="javascript:void(0)" style="background:#e6e6e6"></a></li>
+            <li><a href="javascript:void(0)" style="background:#dadada"></a></li>
+            <li><a href="javascript:void(0)" style="background:#cecece"></a></li>
+            <li><a href="javascript:void(0)" style="background:#c1c1c1"></a></li>
+            <li><a href="javascript:void(0)" style="background:#b5b5b5"></a></li>
+            <li><a href="javascript:void(0)" style="background:#a8a8a8"></a></li>
+            <li><a href="javascript:void(0)" style="background:#9c9c9c"></a></li>
+            <li><a href="javascript:void(0)" style="background:#8f8f8f"></a></li>
+            <li><a href="javascript:void(0)" style="background:#838383"></a></li>
+            <li><a href="javascript:void(0)" style="background:#767676"></a></li>
+            <li><a href="javascript:void(0)" style="background:#6a6a6a"></a></li>
+            <li><a href="javascript:void(0)" style="background:#5d5d5d"></a></li>
+            <li><a href="javascript:void(0)" style="background:#4f4f4f"></a></li>
+            <li><a href="javascript:void(0)" style="background:#434343"></a></li>
+
+            <li><a href="javascript:void(0)" style="background:#363636"></a></li>
+            <li><a href="javascript:void(0)" style="background:#292929"></a></li>
+            <li><a href="javascript:void(0)" style="background:#1c1c1c"></a></li>
+            <li><a href="javascript:void(0)" style="background:#0e0e0e"></a></li>
+            <li><a href="javascript:void(0)" style="background:#000000"></a></li>
+            <li><a href="javascript:void(0)" style="background:#282321"></a></li>
+            <li><a href="javascript:void(0)" style="background:#413631"></a></li>
+            <li><a href="javascript:void(0)" style="background:#5e4e44"></a></li>
+            <li><a href="javascript:void(0)" style="background:#847161"></a></li>
+            <li><a href="javascript:void(0)" style="background:#b69f85"></a></li>
+            <li><a href="javascript:void(0)" style="background:#b38758"></a></li>
+            <li><a href="javascript:void(0)" style="background:#a57c55"></a></li>
+            <li><a href="javascript:void(0)" style="background:#78502b"></a></li>
+            <li><a href="javascript:void(0)" style="background:#613b1b"></a></li>
+            <li><a href="javascript:void(0)" style="background:#4d2a10"></a></li>
+
+            <li><a href="javascript:void(0)" style="background:#f38367"></a></li>
+            <li><a href="javascript:void(0)" style="background:#f69c6f"></a></li>
+            <li><a href="javascript:void(0)" style="background:#fbba77"></a></li>
+            <li><a href="javascript:void(0)" style="background:#fff888"></a></li>
+            <li><a href="javascript:void(0)" style="background:#b8da89"></a></li>
+            <li><a href="javascript:void(0)" style="background:#72c18b"></a></li>
+            <li><a href="javascript:void(0)" style="background:#6bc3bb"></a></li>
+            <li><a href="javascript:void(0)" style="background:#5ec5f3"></a></li>
+            <li><a href="javascript:void(0)" style="background:#6b95d0"></a></li>
+            <li><a href="javascript:void(0)" style="background:#707ebe"></a></li>
+            <li><a href="javascript:void(0)" style="background:#756bb0"></a></li>
+            <li><a href="javascript:void(0)" style="background:#8e70b1"></a></li>
+            <li><a href="javascript:void(0)" style="background:#ad76b2"></a></li>
+            <li><a href="javascript:void(0)" style="background:#ef84b4"></a></li>
+            <li><a href="javascript:void(0)" style="background:#f1838b"></a></li>
+
+            <li><a href="javascript:void(0)" style="background:#ec553e"></a></li>
+            <li><a href="javascript:void(0)" style="background:#f17a45"></a></li>
+            <li><a href="javascript:void(0)" style="background:#f89f4b"></a></li>
+            <li><a href="javascript:void(0)" style="background:#fff555"></a></li>
+            <li><a href="javascript:void(0)" style="background:#9ccd5f"></a></li>
+            <li><a href="javascript:void(0)" style="background:#6bbb63"></a></li>
+            <li><a href="javascript:void(0)" style="background:#33ad65"></a></li>
+            <li><a href="javascript:void(0)" style="background:#1faea4"></a></li>
+            <li><a href="javascript:void(0)" style="background:#00b0ef"></a></li>
+            <li><a href="javascript:void(0)" style="background:#3677be"></a></li>
+            <li><a href="javascript:void(0)" style="background:#445eaa"></a></li>
+            <li><a href="javascript:void(0)" style="background:#4d4697"></a></li>
+            <li><a href="javascript:void(0)" style="background:#714897"></a></li>
+            <li><a href="javascript:void(0)" style="background:#954b98"></a></li>
+            <li><a href="javascript:void(0)" style="background:#eb5469"></a></li>
+
+            <li><a href="javascript:void(0)" style="background:#e6001c"></a></li>
+            <li><a href="javascript:void(0)" style="background:#ec4f1b"></a></li>
+            <li><a href="javascript:void(0)" style="background:#f17f18"></a></li>
+            <li><a href="javascript:void(0)" style="background:#fff300"></a></li>
+            <li><a href="javascript:void(0)" style="background:#7dbf31"></a></li>
+            <li><a href="javascript:void(0)" style="background:#32aa39"></a></li>
+            <li><a href="javascript:void(0)" style="background:#06983e"></a></li>
+            <li><a href="javascript:void(0)" style="background:#009a88"></a></li>
+            <li><a href="javascript:void(0)" style="background:#009dea"></a></li>
+            <li><a href="javascript:void(0)" style="background:#005cad"></a></li>
+            <li><a href="javascript:void(0)" style="background:#004095"></a></li>
+            <li><a href="javascript:void(0)" style="background:#221e80"></a></li>
+            <li><a href="javascript:void(0)" style="background:#52187e"></a></li>
+            <li><a href="javascript:void(0)" style="background:#7e0e7d"></a></li>
+            <li><a href="javascript:void(0)" style="background:#e5007a"></a></li>
+
+            <li><a href="javascript:void(0)" style="background:#8a000e"></a></li>
+            <li><a href="javascript:void(0)" style="background:#8d300d"></a></li>
+            <li><a href="javascript:void(0)" style="background:#914e0b"></a></li>
+            <li><a href="javascript:void(0)" style="background:#9b9100"></a></li>
+            <li><a href="javascript:void(0)" style="background:#9b9100"></a></li>
+            <li><a href="javascript:void(0)" style="background:#196b24"></a></li>
+            <li><a href="javascript:void(0)" style="background:#036128"></a></li>
+            <li><a href="javascript:void(0)" style="background:#006157"></a></li>
+            <li><a href="javascript:void(0)" style="background:#006292"></a></li>
+            <li><a href="javascript:void(0)" style="background:#00396c"></a></li>
+            <li><a href="javascript:void(0)" style="background:#00255e"></a></li>
+            <li><a href="javascript:void(0)" style="background:#150a51"></a></li>
+            <li><a href="javascript:void(0)" style="background:#340050"></a></li>
+            <li><a href="javascript:void(0)" style="background:#4f004d"></a></li>
+            <li><a href="javascript:void(0)" style="background:#89004b"></a></li>
+
+            <li><a href="javascript:void(0)" style="background:#650000"></a></li>
+            <li><a href="javascript:void(0)" style="background:#672100"></a></li>
+            <li><a href="javascript:void(0)" style="background:#693900"></a></li>
+            <li><a href="javascript:void(0)" style="background:#6f6a00"></a></li>
+            <li><a href="javascript:void(0)" style="background:#325513"></a></li>
+            <li><a href="javascript:void(0)" style="background:#0a4e19"></a></li>
+            <li><a href="javascript:void(0)" style="background:#02481c"></a></li>
+            <li><a href="javascript:void(0)" style="background:#004840"></a></li>
+            <li><a href="javascript:void(0)" style="background:#00486b"></a></li>
+            <li><a href="javascript:void(0)" style="background:#002750"></a></li>
+            <li><a href="javascript:void(0)" style="background:#001744"></a></li>
+            <li><a href="javascript:void(0)" style="background:#0b003c"></a></li>
+            <li><a href="javascript:void(0)" style="background:#25003a"></a></li>
+            <li><a href="javascript:void(0)" style="background:#390039"></a></li>
+            <li><a href="javascript:void(0)" style="background:#660036"></a></li>
+
+          </ul>
+
+          <div class="btns">
+            <a href="javascript:void(0)" class="sub">确定</a>
+            <a href="javascript:void(0)" class="del">取消</a>
+          </div>
+        </div>
+      </div>
+
+
+      
+    </div>
+  </div>
+
+
+</div>
+
+<div class="footer">
+  <div class="wrap">
+    <div class="user">
+      <dl>
+        <dt><span>用户</span></dt>
+        <dd><a href="#">登录</a></dd>
+        <dd><a href="#">注册</a></dd>
+      </dl>
+      <p class="copyRight">CopyRight © 2015-2016 挑赞网</p>
+    </div>
+    <div class="help">
+      <dl>
+        <dt><span>参与</span></dt>
+        <dd><a href="#">我要挑战</a></dd>
+        <dd><a href="#">在线投稿</a></dd>
+        <dd><a href="#">挑赞原理</a></dd>
+        <dd><a href="#">礼品</a></dd>
+        <dd><a href="#">艺术品</a></dd>
+      </dl>
+      <dl>
+        <dt><span>帮助中心</span></dt>
+        <dd><a href="#">在线问答</a></dd>
+        <dd><a href="#">积分规则</a></dd>
+        <dd><a href="#">佣金规则</a></dd>
+        <dd><a href="#">素材下载</a></dd>
+        <dd><a href="#">质量保证</a></dd>
+        <dd><a href="#">退换说明</a></dd>
+      </dl>
+      <dl>
+        <dt><span>信息</span></dt>
+        <dd><a href="#">关于我们</a></dd>
+        <dd><a href="#">联系我们</a></dd>
+        <dd><a href="#">关注我们</a></dd>
+        <dd><a href="#">招贤纳士</a></dd>
+      </dl>
+      <p class="copyRight">All Rights Reserved.版权所有 挑赞网</p>
+    </div>
+  </div>
+</div>
+
+<ul id="template">
+    <li class="dragCon" rotateval="0">
+        <img src="" class="dragPic">
+        <span class="dragDot dragList1" data-index="1"></span>
+        <span class="dragDot dragList2" data-index="2"></span>
+        <span class="dragDot dragList3" data-index="3"></span>
+        <span class="dragDot dragList4" data-index="4"></span>
+        <span class="dragDot dragList5" data-index="5"></span>
+        <span class="dragDot dragList6" data-index="6"></span>
+        <span class="dragDot dragList7" data-index="7"></span>
+        <span class="dragDot dragList8" data-index="8"></span>
+        <span class="rotateBtn modifyBtn"></span>  
+        <span class="delBtn modifyBtn"></span>  
+    </li> 
+</ul>
+
+<li rotateval="0" class="dragCon" data-type="text" id="dargText" >
+  <span class="text"></span>
+  <span data-index="1" class="dragDot dragList1"></span>
+  <span data-index="2" class="dragDot dragList2"></span>
+  <span data-index="3" class="dragDot dragList3"></span>
+  <span data-index="4" class="dragDot dragList4"></span>
+  <span data-index="5" class="dragDot dragList5"></span>
+  <span data-index="6" class="dragDot dragList6"></span>
+  <span data-index="7" class="dragDot dragList7"></span>
+  <span data-index="8" class="dragDot dragList8"></span>
+  <span class="rotateBtn modifyBtn"></span>  
+  <span class="delBtn modifyBtn"></span>  
+</li>
+
+<a type="button" id="down_button" target="_blank" onclick="imgPrint()">屏幕截图</a>
+
+<a href="#" id="btns" target="_blank">download</a>
+
+
+<script type="text/javascript">
+  $('.typeList').niceScroll({
+    cursorcolor: "#ffc641",//#CC0071 光标颜色
+    cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+    touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+    cursorwidth: "5px", //像素光标的宽度
+    cursorborder: "0", //   游标边框css定义
+    cursorborderradius: "5px",//以像素为光标边界半径
+    autohidemode: false //是否隐藏滚动条
+  });
+
+  function imgPrint(){     //屏幕截图
+      html2canvas( $("#uploadWrap") ,{          
+        onrendered : function(canvas) {  
+                var myImage = canvas.toDataURL("image/jpeg");  
+               $('#down_button').attr( 'href' , myImage ) ;
+               $('#btns').attr( 'href' , myImage) ;
+                //将图片上传到服务器
+                $.ajax({  
+                    type : "POST",  
+                    url : '',  
+                    data : {data:myImage},  
+                    success : function(data){  
+                        
+                    }  
+                });  
+            } 
+      });
+  }
+
+  (function($){
+    $().ready(function(){
+
+     
+    })
+  })(jQuery);
+
+
+
+  var upLoadHtml='';  //上传图片
+  function PreviewImage(imgFile)
+  {
+
+    var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+    filextension=filextension.toLowerCase();
+    if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+    {
+      alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+      imgFile.focus();
+    }
+    else
+    {
+      var path;
+
+      if(document.all)//IE
+      {
+        imgFile.select();
+        path = document.selection.createRange().text;
+
+        //document.getElementById("uploadWrap").innerHTML="";
+        document.getElementById("uploadWrap").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\" raggable='true' ondragstart='drag(event)' )";//使用滤镜效果
+      }
+      else//FF
+      {
+        path = window.URL.createObjectURL(imgFile.files[0]);
+        upLoadHtml=$("#template").clone();
+        upLoadHtml.find('.dragPic').attr("src",path)
+
+      }
+    }
+
+    $('#uploadWrap').append(upLoadHtml.prop("outerHTML")); 
+  }
+
+  function allowDrop(ev){
+    ev.preventDefault();
+  }
+
+  function drag(ev){
+    ev.dataTransfer.setData("Text",ev.target.id);
+  }
+
+  function drop(ev){
+  
+    var data=ev.dataTransfer.getData("Text");
+
+    var li = $("#template li").clone();
+    var img = li.find("img");
+
+    img.attr("src", document.getElementById(data).src);
+
+    $(ev.target).parent('#uploadWrap').append(li);
+
+    ev.preventDefault();
+    ev.stopPropagation();
+  }
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

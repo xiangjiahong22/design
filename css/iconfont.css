@@ -1,0 +1,20 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../fonts/icon/iconfont.eot?t=1463640733'); 
+  src: url('../fonts/icon/iconfont.eot?t=1463640733#iefix') format('embedded-opentype'), 
+  url('../fonts/icon/iconfont.woff?t=1463640733') format('woff'), 
+  url('../fonts/icon/iconfont.ttf?t=1463640733') format('truetype'), 
+  url('../fonts/icon/iconfont.svg?t=1463640733#iconfont') format('svg'); 
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-user:before { content: "\e674"; }
+.icon-email:before { content: "\e605"; }
+.icon-daizi:before { content: "\e612"; }
