@@ -13,39 +13,37 @@
       var wrapLeft=$('.uploadWrap').offset().left;
       var wrapTop=$('.uploadWrap').offset().top;
 
-      //drag
-
-
       $('.uploadWrap').on('mousedown','.dragCon',function(e){
 
         dragPicIndex++;
 
 
         var _this=$(this);
-        var objL=e.pageX-$(this).offset().left;
-        var objT=e.pageY-$(this).offset().top;
+        var objL=e.pageX-$(this).position().left-wrapLeft;
+        var objT=e.pageY-$(this).position().top-wrapTop;
         var rotateNum=$(this).attr('rotateval');
 
-        //alert(rotateNum);
 
         _this.css({
           'z-index':dragPicIndex
         })
 
+        var objPosLeft=$(this).position().left;
+        var objPosTop=$(this).position().top;
+
+        var objValLeft=$(this).css('left').replace('px','');
+        var objValTop=$(this).css('top').replace('px','');
+
+        var diffLeft=objValLeft-objPosLeft;  //算出旋转后的  left和position().left之间的差值   *****  图片旋转前后的left值   *****
+        var diffTop=objValTop-objPosTop;
 
         $(document).on('mousemove',function(e){
 
-         /* _this.css({
-            'left':e.pageX-objL-wrapLeft,
-            'top':e.pageY-objT-wrapTop
-          })*/
-
-
+         
          _this.css({
-            'left':e.pageX-objL-wrapLeft,
-            'top':e.pageY-objT-wrapTop
+            'left':e.pageX-objL-wrapLeft+diffLeft,
+            'top':e.pageY-objT-wrapTop+diffTop
           })
-       
 
         })
 
@@ -95,7 +93,18 @@
         var dataType=obj.parent('.dragCon').attr('data-type');
         var fontSizeSet=0;
 
-        if(dataIndex=='1'||dataIndex=='7'){  //左边的两个
+        if(dataIndex=='1'){  //左边的两个
+
+          var diffValX=-(scaleMoveX-originalX);  //差值
+          var diffValY=-(scaleMoveY-originalY);  //差值
+          fontSizeSet=diffValX;
+
+          obj.parents('.dragCon').css({
+            'width':originalPicWidth+diffValX,
+            'height':originalPicHeight+diffValY
+          });
+          
+        }else if(dataIndex=='7'){  //左边的两个
 
 	        var diffValX=-(scaleMoveX-originalX);  //差值
 	        var diffValY=(scaleMoveY-originalY);  //差值
@@ -106,7 +115,7 @@
 	          'height':originalPicHeight+diffValY
 	        });
           
-        }else if(dataIndex=='3'|| dataIndex=='5'){  //右边的两个
+        }else if(dataIndex=='5'){  //右边的两个
          
             var diffValX=(scaleMoveX-originalX);
             var diffValY=(scaleMoveY-originalY);
@@ -116,6 +125,16 @@
               'width':originalPicWidth+diffValX,
               'height':originalPicHeight+diffValY
             });
+
+        }else if(dataIndex=='3'){
+          var diffValX=(scaleMoveX-originalX);
+          var diffValY=-(scaleMoveY-originalY);
+          fontSizeSet=diffValX;
+
+          obj.parents('.dragCon').css({
+            'width':originalPicWidth+diffValX,
+            'height':originalPicHeight+diffValY
+          });
 
         }else if(dataIndex=='2'){  //上
           var diffVal=-(scaleMoveY-originalY);
@@ -283,7 +302,7 @@
     var textColor=$('.design .fontColor .color').css('background-color');
 
 		if($('.design .textZone').val()!=''){
-			var li=$('#dargText').clone();
+			var li=$('#dargText').find('li').clone();
 			li.find('.text').text(textVal);
       li.css({
         'font-family':familyVal,

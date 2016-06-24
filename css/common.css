@@ -22,35 +22,24 @@ i,em{font-style: normal}
 }
 
 .styled-select {
-    background: #fff url("../img/selectBg.png") no-repeat scroll 95% center;
-    border: 1px solid #dcdcdc;
-    border-radius: 3px;
-    display: inline-block;
-    float: left;
-    font-size: 14px;
-    height: 34px;
-    margin-bottom: 10px;
-    margin-right: 15px;
-    overflow: hidden;
-    vertical-align: middle;
-    width: 180px;
-}
+    background: #fff url("../img/selectBg.png") no-repeat scroll 95% center;border: 1px solid #dcdcdc;border-radius: 3px;
+    display: inline-block;float: left;font-size: 14px;height: 34px;margin-bottom: 10px;margin-right: 15px;
+    overflow: hidden;vertical-align: middle;width: 180px;}
 
 .styled-select select {
-    background: transparent none repeat scroll 0 0;
-    border: medium none;
-    font-size: 14px;
-    height: 34px;
-    line-height: 25px;
-    padding: 5px;
-    width: 240px;
-}
+    background: transparent none repeat scroll 0 0; border: medium none; font-size: 14px; height: 34px; 
+    line-height: 25px; padding: 5px; width: 240px;}
+
+.maxSelect{width: 574px}
+.maxSelect select{width: 600px}
 
 .regular-checkbox:checked + label::after{top: -2px!important;}
 
 .hide{display: none;}
 .pullLeft{float: left;}
 .pullRight{float: right;}
+.textLeft{text-align: left!important}
+.noFloat{float: none;}
 
 .wrap{width: 950px;margin: 0 auto;}
 .designWrap{width:1090px;margin:0 auto;overflow: hidden;padding-bottom: 50px;}
@@ -81,8 +70,9 @@ a.btnSewt:hover{background: #ffcf5e}
 	height: 72px;}
 .nav .navList ul li a.active{color: #ffc641;border-color: #ffc641;}
 .nav .navList ul li a:hover{color: #ffc641}
-.nav .rightSearch{float: right;height: 36px;width: 200px;margin-top: 20px;}
-.nav .rightSearch .inp{width: 130px;width: 163px;height: 36px;background: none;border:none;color: #eee;float: left;line-height: 40px;}
+.nav .rightSearch{float: right;height: 36px;width: 215px;margin-top: 20px;}
+.nav .rightSearch .inp{width: 130px;width: 163px;height: 36px;background: none;border:none;color: #eee;float: left;line-height: 40px;
+  background: #383637;padding: 0 10px;margin-right: 10px;}
 .nav .rightSearch .sub{width: 36px;height: 36px;float: left;background: url(../img/indexSearch.png) no-repeat center center;border:none;cursor: pointer;}
 
 
@@ -98,12 +88,19 @@ a.btnSewt:hover{background: #ffcf5e}
   font-size: 13px;color: #666666;border-radius: 25px;margin-top: 20px;}
 
 .footer .help dl{width: 160px;}
-.footer .help dl dd a{font-size: 13px;color: #666666;line-height: 32px;}
+.footer .help dl dd a{font-size: 15px;color: #fff;line-height: 32px;}
 .footer .help dl dd a:hover{color:#faaf40}
 .footer .help dl:nth-of-type(3){padding-left: 38px;width: 110px;}
 .footer .help dl:nth-of-type(4){padding-left: 80px;width: 60px;}
 
-
+/*翻页*/
+.page{font-size: 12px;margin-bottom: 10px;margin-top: 22px;overflow: hidden;}
+.page a{color: #777777;display: inline-block;padding: 6px 10px 5px;border: 1px solid #dddddd;float: left;border-left: 0;}
+.page a:hover,.page a:focus{background: #f4f4f4;color: #777777;}
+.page .previous a{border-left: 1px solid #ddd;border-bottom-left-radius: 3px;border-top-left-radius: 3px;padding: 5px 10px 4px}
+.page .next a{border-bottom-right-radius: 3px;border-top-right-radius: 3px;padding: 5px 10px 4px}
+.page a:visited{color: #777777;}
+.page a.active{background: #f4f4f4}
 
 
 

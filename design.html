@@ -90,6 +90,12 @@
               <option>童装</option>
             </select>
           </div>
+          <div class="styled-select minSelect">
+            <select>
+              <option>立领</option>
+              <option>圆领</option>
+            </select>
+          </div>
           <div class="typeList">
             <ul>
               <li>
@@ -124,35 +130,31 @@
           </div>
         </div>
         <div class="pullRight rightCon">
-          <div class="topInfo">
+         <!--  <div class="topInfo">
             男士T桖
             <span class="change"><a href="javascript:void(0)"><i>djf</i>切换背面</a></span>
-          </div>
+          </div> -->
           <div  id="uploadWrap" class="uploadWrap" ondragover="allowDrop(event)" ondrop="drop(event)">
             <img class="modulePic" src="img/module1.jpg">
-
-            <img src="img/pastTheme1.jpg" style="position:absolute;left:100px;top:100px;-moz-transform:rotate(45deg);-moz-transform:translateX(100px);-moz-transform:translateY(100px)" id="ab">
-
           </div>
+          <div class="bot">
+            <div class="designOption">
+              <div class="pullLeft share">
+                <a href="javascript:void(0)" onclick="imgPrint()">保存</a>
+                <a href="#">帮助</a>
+                <a href="#">重置</a>
+                <a href="#">分享</a>
+                <a href="#" class="reverse">查看背面</a>
+                <a href="#" class="pullRight nextStep" >下一步</a>
+
+              </div>
+              
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="bot">
-        <div class="designOption">
-          <div class="pullLeft share">
-            <a href="#">保存</a>
-            <a href="#">帮助</a>
-            <a href="#">重置</a>
-            <a href="#">分享</a>
-          </div>
-          
-        </div>
-        <p class="detailsTit">
-          详情描述
-          <span class="pullRight nextStep">
-            <a href="#">下一步</a>
-          </span>
-        </p>
-      </div>
+      
     </div>
     <div class="right">
       <div class="uploadBtn">
@@ -227,10 +229,11 @@
           </div>
           <span class="fontColor"><span class="color"></span></span>
         </div>
-
-        <textarea class="textZone" placeholder="输入文字"></textarea>
-
-        <a href="javascript:void(0)" class="textSubBtn">确 认</a>
+        <div class="textZone">
+          <input type="text" placeholder="输入文字">
+          <a href="javascript:void(0)" class="textSubBtn">确 认</a>
+        </div>
+        
 
         <div class="colorPanel">
           <h3>Color <span class="pullRight">df</span></h3>
@@ -404,7 +407,7 @@
   </div>
 </div>
 
-<ul id="template">
+<ul id="template" class="hide">
     <li class="dragCon" rotateval="0">
         <img src="" class="dragPic">
         <span class="dragDot dragList1" data-index="1"></span>
@@ -420,23 +423,25 @@
     </li> 
 </ul>
 
-<li rotateval="0" class="dragCon" data-type="text" id="dargText" >
-  <span class="text"></span>
-  <span data-index="1" class="dragDot dragList1"></span>
-  <span data-index="2" class="dragDot dragList2"></span>
-  <span data-index="3" class="dragDot dragList3"></span>
-  <span data-index="4" class="dragDot dragList4"></span>
-  <span data-index="5" class="dragDot dragList5"></span>
-  <span data-index="6" class="dragDot dragList6"></span>
-  <span data-index="7" class="dragDot dragList7"></span>
-  <span data-index="8" class="dragDot dragList8"></span>
-  <span class="rotateBtn modifyBtn"></span>  
-  <span class="delBtn modifyBtn"></span>  
-</li>
+<ul class="hide" id="dargText">
+  <li rotateval="0" class="dragCon" data-type="text"  >
+    <span class="text"></span>
+    <span data-index="1" class="dragDot dragList1"></span>
+    <span data-index="2" class="dragDot dragList2"></span>
+    <span data-index="3" class="dragDot dragList3"></span>
+    <span data-index="4" class="dragDot dragList4"></span>
+    <span data-index="5" class="dragDot dragList5"></span>
+    <span data-index="6" class="dragDot dragList6"></span>
+    <span data-index="7" class="dragDot dragList7"></span>
+    <span data-index="8" class="dragDot dragList8"></span>
+    <span class="rotateBtn modifyBtn"></span>  
+    <span class="delBtn modifyBtn"></span>  
+  </li>
+</ul>
 
-<a type="button" id="down_button" target="_blank" onclick="imgPrint()">屏幕截图</a>
+<!-- <a type="button" id="down_button" target="_blank" onclick="imgPrint()">屏幕截图</a>
 
-<a href="#" id="btns" target="_blank">download</a>
+<a href="#" id="btns" target="_blank">download</a> -->
 
 
 <script type="text/javascript">
@@ -453,13 +458,17 @@
   function imgPrint(){     //屏幕截图
       html2canvas( $("#uploadWrap") ,{          
         onrendered : function(canvas) {  
-                var myImage = canvas.toDataURL("image/jpeg");  
-               $('#down_button').attr( 'href' , myImage ) ;
-               $('#btns').attr( 'href' , myImage) ;
+                var myImage = canvas.toDataURL("image/jpg");  
+                console.log(myImage);
+
+                /*myImage = myImage.replace(/^data:image\/(png|jpeg|jpg);base64,/, "")*/
+
+              /* $('#down_button').attr( 'href' , myImage ) ;
+               $('#btns').attr( 'href' , myImage) ;*/
                 //将图片上传到服务器
                 $.ajax({  
                     type : "POST",  
-                    url : '',  
+                    url : "",  
                     data : {data:myImage},  
                     success : function(data){  
                         
@@ -504,7 +513,7 @@
       else//FF
       {
         path = window.URL.createObjectURL(imgFile.files[0]);
-        upLoadHtml=$("#template").clone();
+        upLoadHtml=$("#template").find('li').clone();
         upLoadHtml.find('.dragPic').attr("src",path)
 
       }
