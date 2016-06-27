@@ -52,7 +52,7 @@ a.btnSewt:hover{background: #ffcf5e}
 .header .topBar .rightInfo{float: right;}
 .header .topBar .leftInfo em{color: #b2b2b2;margin: 0 10px 0 14px;font-size: 12px;}
 .header .topBar .rightInfo em{color: #424242;margin: 0 5px 0 9px;}
-.header .topBar .rightInfo i{font-size: 17px;color: #3f3f3f}
+.header .topBar .rightInfo i{font-size: 18px;color: #3f3f3f}
 .header .topBar .rightInfo i.user{margin-right: 5px;font-size: 20px;}
 .header .topBar .rightInfo i.message{margin-right: 12px;margin-left: 20px;position: relative;}
 .header .topBar .rightInfo .newMsg{display: inline-block;width: 10px;height: 10px;background: #b02441;border-radius: 100%;position: absolute;
