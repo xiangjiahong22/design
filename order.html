@@ -1,0 +1,413 @@
+<html>
+<head>
+  <title>我的订单</title>
+  <meta charset="utf-8">
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="css/form.css">
+  <link rel="stylesheet" type="text/css" href="css/calendar.css">
+
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/calendar.js"></script>
+
+
+</head>
+<body>
+
+  <div class="header">
+    <div class="topBar">
+      <div class="leftInfo">
+        <a href="javascript:void(0)">简体中文</a><em>|</em>
+        <a href="javascript:void(0)">English</a><em>|</em>
+        <a href="#">帮助</a>
+      </div>
+      <div class="rightInfo">
+        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe609;</i>登录</a><em>|</em>
+        <a href="javascript:void(0)" title="注册" class="reg">注册</a>
+        <a href="#"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
+        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe61a;</i></a>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="con">
+        <div class="logo"><a href="index.html" title="挑赞网"><img src="img/logo.png" alt="挑赞网"></a></div>
+        <div class="navList">
+          <ul>
+            <li><a href="index.html" class="active">购买</a></li>
+            <li><a href="#">挑赞</a></li>
+            <li><a href="contribute.html">投稿</a></li>
+            <li><a href="design.html">定制</a></li>
+          </ul>
+        </div>
+        <div class="rightSearch">
+          <form>
+            <input type="text" placeholder="搜索您想要的关键词" class="inp">
+            <input type="submit" class="sub" value="">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap myOrder">
+    <div class="userTit">
+      <img src="img/orderTit.jpg">
+    </div>
+    <div class="newsTitTog">
+      <a href="javascript:void(0)" class="active">所有订单</a>
+      <a href="javascript:void(0)">待付款</a>
+      <a href="javascript:void(0)">待发货</a>
+      <a href="javascript:void(0)">待收货</a>
+      <a href="javascript:void(0)">待评价</a>
+      <a href="javascript:void(0)">售后中</a>
+      <a href="javascript:void(0)">众筹中</a>
+      <a href="javascript:void(0)">定制订单</a>
+    </div>
+    <div class="search">
+      <div class="col-md-11">
+        <div class="calanderBox">
+          <input id="begTime1" name="startTime" autocomplete="off" class="calander" value="" readonly="">
+        </div>
+         <div class="calanderBox">
+          <input id="endTime1" name="endTime" autocomplete="off" class="calander" value="" readonly="">
+        </div>
+        <input type="submit" value="搜 索" class="searchBtn">
+        <div class="searchNum">
+          <input type="text" class="inp" placeholder="输入您要查找的订单号">
+          <input type="submit" class="sub" value="">
+        </div>
+      </div>
+    </div>
+    <ul class="orderList">
+      <li>
+        <div class="top">
+          <span class="orderNo">订单号：4356464657654534</span>
+          <span class="time pullRight">2016-09-22</span>
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0"> 
+          <thead>
+            <tr>
+              <th>商品</th>
+              <th>价格数量</th>
+              <th>地址</th>
+              <th>订单状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="orderImg">
+                <img src="img/workOrder.jpg">
+                <p>简约连衣裙</p>
+                <p>设计师：michael</p>
+              </td>
+              <td>
+                <p>￥45.88(含运费)</p>
+                <p>数量：1</p>
+              </td>
+              <td>
+                <p>中国上海浦东新区陆家嘴西路168号上海华润时代广场</p>
+              </td>
+              <td>
+                <p><a href="#" class="orderBtn noPay">未付款</a></p>
+                <p><a href="#" class="orderBtn checkDetails">查看详情</a></p>
+              </td> 
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <div class="top">
+          <span class="orderNo">订单号：4356464657654534</span>
+          <span class="time pullRight">2016-09-22</span>
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0"> 
+          <thead>
+            <tr>
+              <th>商品</th>
+              <th>价格数量</th>
+              <th>地址</th>
+              <th>订单状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="orderImg">
+                <img src="img/workOrder.jpg">
+                <p>简约连衣裙</p>
+                <p>设计师：michael</p>
+              </td>
+              <td>
+                <p>￥45.88(含运费)</p>
+                <p>数量：1</p>
+              </td>
+              <td>
+                <p>中国上海浦东新区陆家嘴西路168号上海华润时代广场</p>
+              </td>
+              <td>
+                <p><a href="#" class="orderBtn waitingPay">待付款</a></p>
+                <p><a href="#" class="orderBtn checkDetails">查看详情</a></p>
+              </td> 
+            </tr>
+          </tbody>
+        </table>
+      </li><li>
+        <div class="top">
+          <span class="orderNo">订单号：4356464657654534</span>
+          <span class="time pullRight">2016-09-22</span>
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0"> 
+          <thead>
+            <tr>
+              <th>商品</th>
+              <th>价格数量</th>
+              <th>地址</th>
+              <th>订单状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="orderImg">
+                <img src="img/workOrder.jpg">
+                <p>简约连衣裙</p>
+                <p>设计师：michael</p>
+              </td>
+              <td>
+                <p>￥45.88(含运费)</p>
+                <p>数量：1</p>
+              </td>
+              <td>
+                <p>中国上海浦东新区陆家嘴西路168号上海华润时代广场</p>
+              </td>
+              <td>
+                <p><a href="#" class="orderBtn madeToOrder">定制订单</a></p>
+                <p><a href="#" class="orderBtn checkDetails">查看详情</a></p>
+              </td> 
+            </tr>
+          </tbody>
+        </table>
+      </li>
+     
+    </ul>
+    
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+      <div class="user">
+        <dl>
+          <dt><span>用户</span></dt>
+          <dd><a href="#">登录</a></dd>
+          <dd><a href="#">注册</a></dd>
+        </dl>
+        <p class="copyRight">CopyRight © 2015-2016 挑赞网</p>
+      </div>
+      <div class="help">
+        <dl>
+          <dt><span>购买</span></dt>
+          <dd><a href="#">男士</a></dd>
+          <dd><a href="#">女士</a></dd>
+          <dd><a href="#">儿童</a></dd>
+          <dd><a href="#">配饰</a></dd>
+          <dd><a href="#">家居</a></dd>
+        </dl>
+        <dl>
+          <dt><span>参与</span></dt>
+          <dd><a href="#">我要挑战</a></dd>
+          <dd><a href="#">在线投稿</a></dd>
+          <dd><a href="#">挑赞原理</a></dd>
+          <dd><a href="#">礼品</a></dd>
+          <dd><a href="#">艺术品</a></dd>
+        </dl>
+        <dl>
+          <dt><span>帮助中心</span></dt>
+          <dd><a href="#">在线问答</a></dd>
+          <dd><a href="#">积分规则</a></dd>
+          <dd><a href="#">佣金规则</a></dd>
+          <dd><a href="#">素材下载</a></dd>
+          <dd><a href="#">质量保证</a></dd>
+          <dd><a href="#">退换说明</a></dd>
+        </dl>
+        <dl>
+          <dt><span>信息</span></dt>
+          <dd><a href="#">关于我们</a></dd>
+          <dd><a href="#">联系我们</a></dd>
+          <dd><a href="#">关注我们</a></dd>
+          <dd><a href="#">招贤纳士</a></dd>
+        </dl>
+        <p class="copyRight">All Rights Reserved.版权所有 挑赞网</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="regBox" class="homeForm hide">
+    <h3>注册</h3>
+    <p class="tips">欢迎您加入挑赞的大家庭，创建一个属于您自己的专属账号</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="用户名">
+        </div>
+        <div class="formline">
+          <input type="password" placeholder="密码">
+        </div>
+        <div class="formline">
+          <input type="text" placeholder="电子邮件">
+        </div>
+        <div class="agree">
+          <span class="agreeCheck">
+            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1"></label>
+          </span>
+          <span>点击“加入TEEzan”，您同意我们的<a href="#">服务条款</a>和<a href="#">隐私权政策</a></span>
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="注册">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="loginBox" class="homeForm hide">
+    <h3>登录</h3>
+    <p class="tips">欢迎您加入挑赞的大家庭，立即登录开始您的新的旅途</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="用户名">
+        </div>
+        <div class="formline">
+          <input type="password" placeholder="密码">
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="登录">
+        </div>
+        <p class="forgetPsw">如果您忘记了密码？<a href="#">找回密码</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="findPswBox" class="homeForm hide">
+    <h3>找回密码</h3>
+    <p class="tips">忘记了TEEzan的密码，填写信息找回来吧！</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="邮箱">
+          <a href="#" class="getVerCode">获取验证码</a>
+        </div>
+        <div class="formline">
+          <input type="text" placeholder="验证码">
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="提交">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    (function($){
+      $().ready(function(){
+      })
+
+      //获取今天日期
+    var todayDate = new Date();
+    var todayDateStr = "" + todayDate.getFullYear() + "-";
+    todayDateStr += (todayDate.getMonth()+1) + "-";
+    todayDateStr += todayDate.getDate();
+     //日期控件
+    var oDepDate = new Date();
+    var oDepDate = new Date(oDepDate.getFullYear(), oDepDate.getMonth(), 1);
+    var oBackDate = new Date();
+    //收支明细
+    //开始时间实例  
+    var oDepCal1 = new Calendar( {
+      id : "#begTime1", //触发显示日历元素ID
+      isComp : !0,  //使用兼容模式
+      isPopup : !0, //弹出式日历
+      isPrevBtn : !0, //显示上月按钮
+      isNextBtn : !0, //显示下月按钮
+      isCloseBtn : !0, //显示关闭按钮
+      isHoliday : 0, //节假日特殊显示
+      isHolidayTips : !0, //显示节假日1~3天/后1~3天信息
+      isDateInfo : 0, //显示日期信息
+      isMessage : !0, //有日历提示信息
+      isCalStart : !0, //标记为开始时间
+      dateInfoClass : "date-info-start", //开始时间icon样式
+      range : {
+        mindate : "1990-09-22",
+        maxdate : "2020-09-22"
+      }, //限制范围（当天——2020-12-31）
+      count : 1, //日历个数
+      monthStep : 1 //切换上下月日历步长
+        });
+    //结束时间实例
+    var oBackCal1 = new Calendar( {
+      id : "#endTime1", //触发显示日历元素ID
+      isComp : !0,  //使用兼容模式
+      isPopup : !0, //弹出式日历
+      isPrevBtn : !0, //显示上月按钮
+      isNextBtn : !0, //显示下月按钮
+      isCloseBtn : !0, //显示关闭按钮
+      isHoliday : 0, //节假日特殊显示
+      isHolidayTips : !0, //显示节假日1~3天/后1~3天信息
+      isDateInfo : 0, //显示日期信息
+      isMessage : !0, //有日历提示信息
+      isCalEnd : !0, //标记为结束时间
+      dateInfoClass : "date-info-end", //结束时间icon样式
+      range : {
+        mindate : "1990-09-22",
+        maxdate : "2020-09-22"
+      }, //限制范围（当天——2020-12-31）
+      count : 1, //日历个数
+      monthStep : 1 //切换上下月日历步长 
+        });
+
+   
+    
+    //日期点击函数   
+    function dateClick(obj) {  
+      switch (this.triggerNode.id) {
+      case "begTime1":
+        oBackCal1.range.mindate=obj["data-date"];
+        oBackCal1.startDate = this.startDate = obj["data-date"];
+        oBackCal1.render(this.startDate);
+        this.render(this.startDate);
+        oBackCal1.focus();
+        break;
+      case "endTime1":
+        oDepCal1.endDate = this.endDate = obj["data-date"];
+        oDepCal1.render(this.startDate);
+        this.render(this.endDate);
+        break;
+      }
+    }
+    
+    //日期点击自定义事件  
+    oDepCal1.on("dateClick", dateClick);
+    oBackCal1.on("dateClick", dateClick);
+    //为返程实例添加className, 主要为了样式需要
+    oBackCal1.container.className = "cal-end";
+    //开启返程实例的鼠标移动范围
+    oBackCal1.showRange();
+    //开启键盘事件
+    oDepCal1.CalStart = oBackCal1.CalStart = oDepCal1;
+    oDepCal1.CalEnd = oBackCal1.CalEnd = oBackCal1;
+    oDepCal1.keyup();
+    oBackCal1.keyup();
+
+
+  })(jQuery);
+     
+  </script>
+
+
+
+
+
+</body>
+</html>

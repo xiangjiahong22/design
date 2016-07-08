@@ -1,0 +1,283 @@
+<html>
+<head>
+  <title>付款</title>
+  <meta charset="utf-8">
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="css/form.css">
+  <link rel="stylesheet" type="text/css" href="css/calendar.css">
+
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+
+</head>
+<body>
+  <div class="header">
+    <div class="topBar">
+      <div class="leftInfo">
+        <a href="javascript:void(0)">简体中文</a><em>|</em>
+        <a href="javascript:void(0)">English</a><em>|</em>
+        <a href="#">帮助</a>
+      </div>
+      <div class="rightInfo">
+        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe609;</i>登录</a><em>|</em>
+        <a href="javascript:void(0)" title="注册" class="reg">注册</a>
+        <a href="#"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
+        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe61a;</i></a>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="con">
+        <div class="logo"><a href="index.html" title="挑赞网"><img src="img/logo.png" alt="挑赞网"></a></div>
+        <div class="navList">
+          <ul>
+            <li><a href="index.html" class="active">购买</a></li>
+            <li><a href="#">挑赞</a></li>
+            <li><a href="contribute.html">投稿</a></li>
+            <li><a href="design.html">定制</a></li>
+          </ul>
+        </div>
+        <div class="rightSearch">
+          <form>
+            <input type="text" placeholder="搜索您想要的关键词" class="inp">
+            <input type="submit" class="sub" value="">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap payment">
+    <div class="left pullLeft">
+      <div class="userTit">
+        <img src="img/paymentTit.jpg">
+      </div>
+      <div class="mailTit">
+        收货地址
+      </div> 
+      <div class="userAddrCon">
+        <div class="userAddr active">
+          <div class="nameTop">
+            <span class="name">保罗</span>收件人
+            <span class="handle">
+              <a href="#" class="modify">修改</a>
+              <a href="#">删除</a>
+            </span>
+          </div>
+          <div class="tel">
+            18071751043
+            <span class="zipCode">邮编530076</span>
+          </div>
+          <div class="addr">
+            中国上海浦东新区陆家嘴西路168号 上海华润时代广场
+          </div>
+          <span class="check"><i class="icon iconfont">&#xe611;</i></span>
+        </div>
+        <div class="userAddr">
+          <div class="nameTop">
+            <span class="name">保罗</span>收件人
+            <span class="handle">
+              <a href="#" class="modify">修改</a>
+              <a href="#">删除</a>
+            </span>
+          </div>
+          <div class="tel">
+            18071751043
+            <span class="zipCode">邮编530076</span>
+          </div>
+          <div class="addr">
+            中国上海浦东新区陆家嘴西路168号 上海华润时代广场
+          </div>
+
+        </div>
+      </div>
+      <div class="addAddr">
+        <span class="icon iconfont">&#xe61e;</span>新增收货地址
+      </div>
+      <div class="addAddrCon">
+        <form class="addrForm">
+          <div class="styled-select maxSelect">
+            <select>
+              <option>国家</option>
+              <option>中国</option>
+              <option>美国</option>
+              <option>英国</option>
+              <option>韩国</option>
+              <option>日本</option>
+              <option>斯洛文尼亚</option>
+            </select>
+          </div>
+          <div class="styled-select minSelect">
+            <select>
+              <option>省</option>
+              <option>北京</option>
+              <option>上海</option>
+              <option>湖北</option>
+              <option>湖南</option>
+              <option>河北</option>
+              <option>河南</option>
+              <option>山东</option>
+            </select>
+          </div>
+          <div class="styled-select minSelect">
+            <select>
+              <option>市</option>
+              <option>武汉</option>
+              <option>恩施</option>
+              <option>荆门</option>
+              <option>十堰</option>
+              <option>黄冈</option>
+              <option>宜昌</option>
+            </select>
+          </div>
+          <div class="styled-select minSelect noMargin" >
+            <select>
+              <option>区</option>
+              <option>江岸区</option>
+              <option>江汉区</option>
+              <option>汉阳区</option>
+              <option>武昌区</option>
+              <option>洪山区</option>
+              <option>新洲区</option>
+            </select>
+          </div>
+          <textarea placeholder="填写您的具体地址" class="maxText"></textarea>
+          <div class="addrInp">
+            <input type="text" placeholder="输入您的姓名" class="inp">
+            <input type="text" placeholder="输入您的电话" class="inp noMargin">
+          </div>
+          <div class="sub">
+            <input type="submit" value="保存" class="subBtn">
+          </div>
+        </form>
+      </div>
+
+      <div class="mailTit mailBorder">
+        留言备注
+      </div> 
+      <textarea placeholder="填写您要说明的要求" class="textarea"></textarea>
+      <div class="mailTit">
+        支付方式
+      </div> 
+      <div class="payWay">
+        <img src="img/alipayWay.jpg">
+      </div>
+      <div class="mailTit mailBorder">
+        总金额
+        <span class="pullRight total">
+          ¥250.54
+        </span>
+      </div> 
+      <div class="payBtn">
+        <a href="#">下一步</a>
+      </div>
+    </div>
+    <div class="right pullRight">
+      <div class="userAddr">
+        <div class="nameTop">
+          <span class="name">购物车</span>
+          <span class="pullRight edit"><a href="#">编辑</a></span>
+        </div>
+        <div class="userInfo">
+          <div class="pic pullLeft">
+            <img src="img/userPic.jpg">
+          </div>
+          <div class="userText pullLeft">
+            <p class="name">小蜜蜂蜂蜂蜂</p>
+            <p class="author">有NATHAN派尔</p>
+          </div>
+          <div class="price pullRight">
+            ￥180.00
+          </div>
+        </div>
+        <div class="priceDetails">
+          <p>小计<span class="pullRight">￥183.00</span></p>
+          <p>运输<span class="pullRight">￥10.00</span></p>
+        </div>
+        <div class="total">
+          总金额
+          <span class="btn">￥193.00</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+      <div class="user">
+        <dl>
+          <dt><span>用户</span></dt>
+          <dd><a href="#">登录</a></dd>
+          <dd><a href="#">注册</a></dd>
+        </dl>
+        <p class="copyRight">CopyRight © 2015-2016 挑赞网</p>
+      </div>
+      <div class="help">
+        <dl>
+          <dt><span>购买</span></dt>
+          <dd><a href="#">男士</a></dd>
+          <dd><a href="#">女士</a></dd>
+          <dd><a href="#">儿童</a></dd>
+          <dd><a href="#">配饰</a></dd>
+          <dd><a href="#">家居</a></dd>
+        </dl>
+        <dl>
+          <dt><span>参与</span></dt>
+          <dd><a href="#">我要挑战</a></dd>
+          <dd><a href="#">在线投稿</a></dd>
+          <dd><a href="#">挑赞原理</a></dd>
+          <dd><a href="#">礼品</a></dd>
+          <dd><a href="#">艺术品</a></dd>
+        </dl>
+        <dl>
+          <dt><span>帮助中心</span></dt>
+          <dd><a href="#">在线问答</a></dd>
+          <dd><a href="#">积分规则</a></dd>
+          <dd><a href="#">佣金规则</a></dd>
+          <dd><a href="#">素材下载</a></dd>
+          <dd><a href="#">质量保证</a></dd>
+          <dd><a href="#">退换说明</a></dd>
+        </dl>
+        <dl>
+          <dt><span>信息</span></dt>
+          <dd><a href="#">关于我们</a></dd>
+          <dd><a href="#">联系我们</a></dd>
+          <dd><a href="#">关注我们</a></dd>
+          <dd><a href="#">招贤纳士</a></dd>
+        </dl>
+        <p class="copyRight">All Rights Reserved.版权所有 挑赞网</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  (function($){
+    $().ready(function(){
+      //add addr  
+      $('.addAddr').on('click',function(){
+        $('.payment .addrForm').toggle();
+      })
+
+      
+
+      $('.userAddr').on('click',function(){
+        $('.userAddrCon .userAddr').removeClass('active');
+        $(this).addClass('active');
+         $('.userAddrCon .userAddr .check').remove();
+         $(this).append('<span class="check"><i class="icon iconfont">&#xe611;</i></span>');
+
+
+      })
+
+
+    })
+  })(jQuery);
+  </script>
+
+</body>
+</html>

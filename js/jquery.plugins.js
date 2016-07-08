@@ -17,7 +17,7 @@
 	            };
 	            var options = $.extend(defaults, options);
 
-				var toggleWrap=$('.toggleCon');
+				var toggleWrap=$(this).siblings('.toggleCon');
 				$('a',this).on('click',function(){
 
 					var $index=$(this).index();
@@ -31,7 +31,7 @@
 					}
 					
 				})
-			}
+			},
 
 		});
 	})

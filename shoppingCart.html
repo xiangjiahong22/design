@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>会员中心-收货地址</title>
+  <title>购物车</title>
   <meta charset="utf-8">
   <meta name="description" content=""/>
   <meta name="keywords" content=""/>
@@ -9,10 +9,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/iconfont.css">
   <link rel="stylesheet" type="text/css" href="css/form.css">
+  <link rel="stylesheet" type="text/css" href="css/calendar.css">
 
 </head>
 <body>
-
   <div class="header">
     <div class="topBar">
       <div class="leftInfo">
@@ -21,10 +21,10 @@
         <a href="#">帮助</a>
       </div>
       <div class="rightInfo">
-        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe674;</i>登录</a><em>|</em>
+        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe609;</i>登录</a><em>|</em>
         <a href="javascript:void(0)" title="注册" class="reg">注册</a>
-        <a href="#"><i class="icon iconfont message" title="新消息">&#xe605;<span class="newMsg"></span></i></a>
-        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe612;</i></a>
+        <a href="#"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
+        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe61a;</i></a>
       </div>
     </div>
 
@@ -49,153 +49,80 @@
     </div>
   </div>
 
-  <div class="wrap userCenter">
+  <div class="wrap myOrder shoppingCart">
     <div class="userTit">
-      <img src="img/userTit.jpg">
+      <img src="img/shoppingTit.jpg">
     </div>
-    <div class="aside">
-      <ul>
-        <li><a href="userOrder.html">我的订单</a></li>
-        <li><a href="userCollect.html">我的收藏</a></li>
-        <li class="active"><a href="userAddr.html">收货地址</a></li>
-        <li><a href="userHomepage.html">个人主页</a></li>
-        <li><a href="userPageSet.html">主页设置</a></li>
-        <li><a href="userAccount.html">我的账户</a></li>
-        <li><a href="userIntegral.html">我的积分</a></li>
-        <li><a href="userCommission.html">我的佣金</a></li>
-        <li><a href="userMsg.html">消息盒子</a></li>
-        <li><a href="userInvoice.html">发票申请</a></li>
-        <li><a href="userAccountSafe.html">账号安全</a></li>
-        <li><a href="userCoupon.html">我的优惠券</a></li>
-      </ul>
+    <div class="mailTit">
+      邮寄信息
     </div>
-    <div class="article">
-      <h1><span>我的佣金</span></h1>
-      <form class="addrForm">
-        <div class="styled-select maxSelect">
-          <select>
-            <option>国家</option>
-            <option>中国</option>
-            <option>美国</option>
-            <option>英国</option>
-            <option>韩国</option>
-            <option>日本</option>
-            <option>斯洛文尼亚</option>
-          </select>
-        </div>
-        <div class="styled-select minSelect">
-          <select>
-            <option>省</option>
-            <option>北京</option>
-            <option>上海</option>
-            <option>湖北</option>
-            <option>湖南</option>
-            <option>河北</option>
-            <option>河南</option>
-            <option>山东</option>
-          </select>
-        </div>
-        <div class="styled-select minSelect">
-          <select>
-            <option>市</option>
-            <option>武汉</option>
-            <option>恩施</option>
-            <option>荆门</option>
-            <option>十堰</option>
-            <option>黄冈</option>
-            <option>宜昌</option>
-          </select>
-        </div>
-        <div class="styled-select minSelect">
-          <select>
-            <option>区</option>
-            <option>江岸区</option>
-            <option>江汉区</option>
-            <option>汉阳区</option>
-            <option>武昌区</option>
-            <option>洪山区</option>
-            <option>新洲区</option>
-          </select>
-        </div>
-        <textarea class="maxText" placeholder="填写您的具体地址"></textarea>
-        <div class="addrInp">
-          <input class="inp" type="text" placeholder="输入您的姓名"/>
-          <input class="inp" type="text" placeholder="输入您的电话"/>
-        </div>
-        <div class="sub">
-          <input class="subBtn" type="submit" value="保存">
-        </div>
-      </form>
-     
-      <div class="tableCon">
-        <h2 class="tableTit colorSet">您已保存了3条地址</h2>
-        <table border="0" cellpadding="0" cellspacing="0">
+    <ul class="orderList">
+      <li>
+        <table border="0" cellpadding="0" cellspacing="0"> 
           <thead>
             <tr>
-              <th>收货人</th>
-              <th>所在地区</th>
-              <th>详细地址</th>
-              <th>邮编</th>
-              <th>电话</th>
+              <th>标题</th>
+              <th>描述</th>
+              <th>数量</th>
+              <th>单价</th>
+              <th>总价</th>
               <th>操作</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Michael</td>
-              <td>中国上海浦东新区</td>
-              <td>陆家嘴西路168号 上海华润时代广场</td>
-              <td>100568</td>
-              <td>13854126584</td>
-              <td class="handle"><a href="#">修改</a> | <a href="#">删除</a></td>
-            </tr>
-            <tr>
-              <td>Michael</td>
-              <td>中国上海浦东新区</td>
-              <td>陆家嘴西路168号 上海华润时代广场</td>
-              <td>100568</td>
-              <td>13854126584</td>
-              <td class="handle"><a href="#">修改</a> | <a href="#">删除</a></td>
-            </tr>
-            <tr>
-              <td>Michael</td>
-              <td>中国上海浦东新区</td>
-              <td>陆家嘴西路168号 上海华润时代广场</td>
-              <td>100568</td>
-              <td>13854126584</td>
-              <td class="handle"><a href="#">修改</a> | <a href="#">删除</a></td>
-            </tr>
-            <tr>
-              <td>保罗沃克</td>
-              <td>中国上海浦东新区</td>
-              <td>陆家嘴西路168号 上海华润时代广场</td>
-              <td>100568</td>
-              <td>13854126584</td>
-              <td class="handle"><a href="#">修改</a> | <a href="#">删除</a></td>
-            </tr>
-            <tr>
-              <td>保罗沃克</td>
-              <td>中国上海浦东新区</td>
-              <td>陆家嘴西路168号 上海华润时代广场</td>
-              <td>100568</td>
-              <td>13854126584</td>
-              <td class="handle"><a href="#">修改</a> | <a href="#">删除</a></td>
+              <td class="orderImg">
+                <img src="img/workOrder.jpg">
+                <p class="userName">xiangjiahong22</p>
+                <p>由Nathan派尔</p>
+              </td>
+              <td>
+                <p>强大的海军男装T桖</p>
+              </td>
+              <td>
+                <a href="javascript:void(0)" class="numHandle cartReduce">-</a>
+                <input type="text" value="1" class="numHandle cartInp">
+                <a href="javascript:void(0)" class="numHandle cartIncrease">+</a>
+              </td> 
+              <td>￥15.00</td>
+              <td>￥15.00</td>
+              <td><a href="#" class="del">删除</a></td>
             </tr>
           </tbody>
         </table>
-        <div class="page">
-          <div class="pullRight">
-            <span class="previous"><a href="javascript:void(0)">上一页</a></span>
-            <a href="" class="active">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <span class="next"><a href="javascript:void(0)">下一页</a></span>
+      </li>
+
+    </ul>
+    <div class="mailTit">
+      付款
+    </div>
+    <div class="payCondition">
+      <div class="integral">
+        <div>应用的礼品，优惠劵货商店代码。</div>
+        <div>选择要抵扣的积分：</div>
+        <div>
+          <div class="styled-select minSelect noFloat">
+            <select>
+              <option>5</option>
+              <option>10</option>
+              <option>100</option>
+            </select>
           </div>
         </div>
+        <div>可用积分：100</div>
+      </div>
+      <div class="price">
+        <div>小计： <span class="pullRight">￥15.50</span></div>
+        <div>运费： <span class="pullRight">￥15.50</span></div>
+        <div class="total">
+          预计总金额：<span class="totalNum">￥31.00</span>
+        </div>  
       </div>
     </div>
+    <div class="nextBtn">
+      <a href="#">下一步</a>
+    </div>
+    
   </div>
 
   <div class="footer">
@@ -310,7 +237,6 @@
       </form>
     </div>
   </div>
-
 
 </body>
 </html>

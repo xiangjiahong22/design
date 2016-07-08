@@ -32,6 +32,8 @@ i,em{font-style: normal}
 
 .maxSelect{width: 574px}
 .maxSelect select{width: 600px}
+.minSelect{width: 365px;}
+.minSelect select{width: 385px;}
 
 .regular-checkbox:checked + label::after{top: -2px!important;}
 
@@ -40,6 +42,7 @@ i,em{font-style: normal}
 .pullRight{float: right;}
 .textLeft{text-align: left!important}
 .noFloat{float: none;}
+.noMargin{margin: 0!important}
 
 .wrap{width: 950px;margin: 0 auto;}
 .designWrap{width:1090px;margin:0 auto;overflow: hidden;padding-bottom: 50px;}
@@ -94,7 +97,7 @@ a.btnSewt:hover{background: #ffcf5e}
 .footer .help dl:nth-of-type(4){padding-left: 80px;width: 60px;}
 
 /*翻页*/
-.page{font-size: 12px;margin-bottom: 10px;margin-top: 22px;overflow: hidden;}
+.page{font-size: 12px;margin-bottom: 10px;padding-top: 22px;overflow: hidden;clear: both;}
 .page a{color: #777777;display: inline-block;padding: 6px 10px 5px;border: 1px solid #dddddd;float: left;border-left: 0;}
 .page a:hover,.page a:focus{background: #f4f4f4;color: #777777;}
 .page .previous a{border-left: 1px solid #ddd;border-bottom-left-radius: 3px;border-top-left-radius: 3px;padding: 5px 10px 4px}
@@ -102,11 +105,42 @@ a.btnSewt:hover{background: #ffcf5e}
 .page a:visited{color: #777777;}
 .page a.active{background: #f4f4f4}
 
-
-
-
-
-
+/*calander*/
+.calanderBox {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 175px;
+}
+input.calander {
+    border: 1px solid #b1cbd8;
+    border-radius: 3px;
+    color: #4d4d4d;
+    height: 32px;
+    line-height: 32px;
+    margin: 5px 0;
+    padding: 0 5px;
+    width: 160px;
+}
+#endTime1 {
+    background: rgba(0, 0, 0, 0) url("../img/endTimeBg.png") no-repeat scroll 95% center;
+}
+#begTime1 {
+    background: rgba(0, 0, 0, 0) url("../img/begTimeBg.png") no-repeat scroll 95% center;
+}
+span.date-info-start {
+    background: rgba(0, 0, 0, 0) url("../img/123.png") no-repeat scroll right -108px;
+    color: #a1a1a1;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    margin: -10px 0 0;
+    overflow: hidden;
+    padding-right: 25px;
+    position: absolute;
+    right: 5px;
+    top: 67%;
+}
 
 
 
