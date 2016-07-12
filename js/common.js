@@ -1,31 +1,52 @@
 (function($){
 	$().ready(function(){
-		//bestList
-		$('.bestList li').hover(function(){
-			$('a',this).append('<div class="hoverInfoBox">'+
-	            '<div class="con">'+
-	              '<p class="name"><span>T-SHIRT</span></p>'+
-	              '<P class="workName">Magnetic Big Kid</P>'+
-	              '<p class="price">￥32.00</p>'+
-	            '</div>'+
-	          '</div>');
-		},function(){
-			$('.hoverInfoBox',this).remove();
-		})
+		//login register
+		$('.reg').on('click',function(){
+	        layer.open({
+	          type: 1,
+	          title: false, 
+	          content: $('#regBox'),
+	          area:['850px', '650px'],
+	          fix: true,
+	          zIndex:9999,
+	          offset : ['100px' , '']
+	        });
+	      })
 
-		//pastTheme
-		$('.pastTheme li:not(:last)').hover(function(){
-			$('a',this).append('<div class="hoverInfoBox">'+
-	            '<div class="con">'+
-	              '<p class="check">查看获奖者</p>'+
-	            '</div>'+
-	          '</div>');
-		},function(){
-			$('.hoverInfoBox',this).remove();
-		})
+	      var loginLayer=null;
+	      $('.login').on('click',function(){
+	        loginLayer=layer.open({
+	          type: 1,
+	          title: false, 
+	          content: $('#loginBox'),
+	          area:['850px', '600px'],
+	          fix: true,
+	          zIndex:9999,
+	          offset : ['100px' , '']
+	        });
+	      })
+
+	      $('.homeForm .forgetPsw a').on('click',function(){
+	        layer.closeAll();
+	        layer.open({
+	          type: 1,
+	          title: false, 
+	          content: $('#findPswBox'),
+	          area:['850px', '550px'],
+	          fix: true,
+	          zIndex:9999,
+	          offset : ['100px' , '']
+	        });
+	      })
+
+	      layer.config({
+	        extend: [
+	          'css/layer.css' 
+	        ]
+	      });
+
 
 		//buyentrance4-toggle
-
 		$('.rightInfo').each(function(){
 			$('.worksType:gt(0) .sizeInfo',this).addClass('hide');
 		})
@@ -113,6 +134,33 @@
 			}
 			
 			themeWorkTogRight(togPicUrl);
+		})
+
+		//newsCenter
+		$('.helpCenter .helpCon li h2 .moreIcon').attr('showMore',true);
+		$('.helpCenter .helpCon li h2 .moreIcon').on('click',function(){
+			if(eval($(this).attr('showMore'))){
+				$(this).parent('h2').siblings('p').css({
+					'height':'26px',
+					'overflow':'hidden'
+				})
+				$(this).css({
+					'-webkit-transform':'rotate(0deg)',
+					'-moz-transform':'rotate(0deg)',
+					'transform':'rotate(0deg)'
+				})
+				$(this).attr('showMore',false);
+			}else{
+				$(this).parent('h2').siblings('p').css({
+					'height':'auto'
+				})
+				$(this).css({
+					'-webkit-transform':'rotate(180deg)',
+					'-moz-transform':'rotate(180deg)',
+					'transform':'rotate(180deg)'
+				})
+				$(this).attr('showMore',true);
+			}
 		})
 
 		

@@ -32,8 +32,6 @@ i,em{font-style: normal}
 
 .maxSelect{width: 574px}
 .maxSelect select{width: 600px}
-.minSelect{width: 365px;}
-.minSelect select{width: 385px;}
 
 .regular-checkbox:checked + label::after{top: -2px!important;}
 
@@ -45,7 +43,6 @@ i,em{font-style: normal}
 .noMargin{margin: 0!important}
 
 .wrap{width: 950px;margin: 0 auto;}
-.designWrap{width:1090px;margin:0 auto;overflow: hidden;padding-bottom: 50px;}
 a.btnSewt:hover{background: #ffcf5e}
 
 /*header*/
@@ -97,7 +94,7 @@ a.btnSewt:hover{background: #ffcf5e}
 .footer .help dl:nth-of-type(4){padding-left: 80px;width: 60px;}
 
 /*翻页*/
-.page{font-size: 12px;margin-bottom: 10px;padding-top: 22px;overflow: hidden;clear: both;}
+.page{font-size: 12px;margin-bottom: 20px;padding-top: 22px;overflow: hidden;clear: both;}
 .page a{color: #777777;display: inline-block;padding: 6px 10px 5px;border: 1px solid #dddddd;float: left;border-left: 0;}
 .page a:hover,.page a:focus{background: #f4f4f4;color: #777777;}
 .page .previous a{border-left: 1px solid #ddd;border-bottom-left-radius: 3px;border-top-left-radius: 3px;padding: 5px 10px 4px}

@@ -9,6 +9,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/iconfont.css">
 
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="plugins/layerAlert/layer.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+
 
 
 </head>
@@ -22,10 +26,10 @@
         <a href="#">帮助</a>
       </div>
       <div class="rightInfo">
-        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe674;</i>登录</a><em>|</em>
+        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe609;</i>登录</a><em>|</em>
         <a href="javascript:void(0)" title="注册" class="reg">注册</a>
-        <a href="#"><i class="icon iconfont message" title="新消息">&#xe605;<span class="newMsg"></span></i></a>
-        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe612;</i></a>
+        <a href="#"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
+        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe61a;</i></a>
       </div>
     </div>
 
@@ -37,7 +41,7 @@
             <li><a href="index.html">购买</a></li>
             <li><a href="#">挑赞</a></li>
             <li><a href="contribute.html" class="active">投稿</a></li>
-            <li><a href="#">定制</a></li>
+            <li><a href="design.html">定制</a></li>
           </ul>
         </div>
         <div class="rightSearch">
@@ -57,10 +61,10 @@
    <div class="recommend">
     <div class="recommendTit">
       <div class="name">
-        儿童帆格简约衬衫
+        <i class="icon iconfont">&#xe612;</i>儿童帆格简约衬衫
       </div>
       <div class="user">
-        <span class="icon">jldf</span>
+        <span class="icon"><i class="icon iconfont">&#xe618;</i></span>
         <div class="text">
           <p>设计</p>
           <p class="userName">yangyangyang</p>
@@ -95,12 +99,20 @@
       <div class="user">
         <dl>
           <dt><span>用户</span></dt>
-          <dd><a href="#">登录</a></dd>
-          <dd><a href="#">注册</a></dd>
+          <dd><a href="javascript:void(0)" class="login">登录</a></dd>
+          <dd><a href="javascript:void(0)" class="reg">注册</a></dd>
         </dl>
         <p class="copyRight">CopyRight © 2015-2016 挑赞网</p>
       </div>
       <div class="help">
+        <dl>
+          <dt><span>购买</span></dt>
+          <dd><a href="#">男士</a></dd>
+          <dd><a href="#">女士</a></dd>
+          <dd><a href="#">儿童</a></dd>
+          <dd><a href="#">配饰</a></dd>
+          <dd><a href="#">家居</a></dd>
+        </dl>
         <dl>
           <dt><span>参与</span></dt>
           <dd><a href="#">我要挑战</a></dd>
@@ -127,6 +139,71 @@
         </dl>
         <p class="copyRight">All Rights Reserved.版权所有 挑赞网</p>
       </div>
+    </div>
+  </div>
+
+  <div id="regBox" class="homeForm hide">
+    <h3>注册</h3>
+    <p class="tips">欢迎您加入挑赞的大家庭，创建一个属于您自己的专属账号</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="用户名">
+        </div>
+        <div class="formline">
+          <input type="password" placeholder="密码">
+        </div>
+        <div class="formline">
+          <input type="text" placeholder="电子邮件">
+        </div>
+        <div class="agree">
+          <span class="agreeCheck">
+            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1"></label>
+          </span>
+          <span>点击“加入TEEzan”，您同意我们的<a href="#">服务条款</a>和<a href="#">隐私权政策</a></span>
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="注册">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="loginBox" class="homeForm hide">
+    <h3>登录</h3>
+    <p class="tips">欢迎您加入挑赞的大家庭，立即登录开始您的新的旅途</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="用户名">
+        </div>
+        <div class="formline">
+          <input type="password" placeholder="密码">
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="登录">
+        </div>
+        <p class="forgetPsw">如果您忘记了密码？<a href="#">找回密码</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="findPswBox" class="homeForm hide">
+    <h3>找回密码</h3>
+    <p class="tips">忘记了TEEzan的密码，填写信息找回来吧！</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="邮箱">
+          <a href="#" class="getVerCode">获取验证码</a>
+        </div>
+        <div class="formline">
+          <input type="text" placeholder="验证码">
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="提交">
+        </div>
+      </form>
     </div>
   </div>
 

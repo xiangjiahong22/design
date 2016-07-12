@@ -10,10 +10,12 @@
   <link rel="stylesheet" type="text/css" href="css/iconfont.css">
 
   <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="plugins/layerAlert/layer.js"></script>
   <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
   <script type="text/javascript" src="js/html5upload.js"></script>
   <script type="text/javascript" src="js/jquery.design.js"></script>
   <script type="text/javascript" src="js/html2canvas.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
 
 
 
@@ -21,40 +23,40 @@
 <body>
 
 <div class="header">
-  <div class="topBar">
-    <div class="leftInfo">
-      <a href="javascript:void(0)">简体中文</a><em>|</em>
-      <a href="javascript:void(0)">English</a><em>|</em>
-      <a href="#">帮助</a>
-    </div>
-    <div class="rightInfo">
+    <div class="topBar">
+      <div class="leftInfo">
+        <a href="javascript:void(0)">简体中文</a><em>|</em>
+        <a href="javascript:void(0)">English</a><em>|</em>
+        <a href="#">帮助</a>
+      </div>
+      <div class="rightInfo">
         <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe609;</i>登录</a><em>|</em>
         <a href="javascript:void(0)" title="注册" class="reg">注册</a>
         <a href="#"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
         <a href="#"><i class="icon iconfont cart" title="购物车">&#xe61a;</i></a>
       </div>
-  </div>
+    </div>
 
-  <div class="nav">
-    <div class="con">
-      <div class="logo"><a href="index.html" title="挑赞网"><img src="img/logo.png" alt="挑赞网"></a></div>
-      <div class="navList">
-        <ul>
-          <li><a href="index.html">购买</a></li>
-          <li><a href="#">挑赞</a></li>
-          <li><a href="contribute.html">投稿</a></li>
-          <li><a href="#" class="active">定制</a></li>
-        </ul>
-      </div>
-      <div class="rightSearch">
-        <form>
-          <input type="text" placeholder="搜索您想要的关键词" class="inp">
-          <input type="submit" class="sub" value="">
-        </form>
+    <div class="nav">
+      <div class="con">
+        <div class="logo"><a href="index.html" title="挑赞网"><img src="img/logo.png" alt="挑赞网"></a></div>
+        <div class="navList">
+          <ul>
+            <li><a href="index.html">购买</a></li>
+            <li><a href="#">挑赞</a></li>
+            <li><a href="contribute.html">投稿</a></li>
+            <li><a href="design.html" class="active">定制</a></li>
+          </ul>
+        </div>
+        <div class="rightSearch">
+          <form>
+            <input type="text" placeholder="搜索您想要的关键词" class="inp">
+            <input type="submit" class="sub" value="">
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 <div class="designWrap">
 
@@ -135,20 +137,35 @@
             <span class="change"><a href="javascript:void(0)"><i>djf</i>切换背面</a></span>
           </div> -->
           <div  id="uploadWrap" class="uploadWrap" ondragover="allowDrop(event)" ondrop="drop(event)">
-            <img class="modulePic" src="img/module1.jpg">
+            <img class="modulePic" src="img/customList3.jpg">
+            <img src="img/watermark.png" class="hide" id="watermarkPic">
           </div>
           <div class="bot">
-            <div class="designOption">
-              <div class="pullLeft share">
-                <a href="javascript:void(0)" onclick="imgPrint()">保存</a>
-                <a href="#">帮助</a>
-                <a href="#">重置</a>
-                <a href="#">分享</a>
-                <a href="#" class="reverse">查看背面</a>
-                <a href="#" class="pullRight nextStep" >下一步</a>
+            <div class="designOption share">
+              <div class="pullLeft leftBtn">
+                <a href="javascript:void(0)" id="save_button" onclick="imgPrint()">
+                  <i class="icon iconfont">&#xe61e;</i>保存
+                </a>
+                <a href="javascript:void(0)" id="down_button" download="designPic">
+                  <i class="icon iconfont">&#xe625;</i>下载
+                </a>
+                <a href="#"><i class="icon iconfont">&#xe60c;</i>帮助</a>
+                <a href="#"><i class="icon iconfont">&#xe603;</i>重置</a>
 
+                <a href="#" class="reverse pullRight">查看背面</a>
+                
               </div>
-              
+              <div class="shareBtn">
+                <span class="shareMore">
+                  分享&nbsp;&nbsp;
+                  <span class="shareMore">
+                    <a title="微信" href="#"><i class="icon iconfont wechart"></i></a>
+                    <a title="微博" href="#"><i class="icon iconfont microBlog"></i></a>
+                    <a title="脸书" href="#"><i class="icon iconfont facebook"></i></a>
+                    <a title="推特" href="#"><i class="icon iconfont twitter"></i></a>
+                  </span>
+                  <a href="#" class="pullRight nextStep" >下一步</a>
+              </div>
             </div>
           </div>
 
@@ -163,7 +180,7 @@
       </div>
       <div class="search">
         <input type="text" placeholder="搜索关键字" class="inp">
-        <input type="submit" value="df" class="sub">
+        <input type="submit" value="" class="sub">
       </div>
       <div class="sample">
         <ul>
@@ -368,44 +385,117 @@
 </div>
 
 <div class="footer">
-  <div class="wrap">
-    <div class="user">
-      <dl>
-        <dt><span>用户</span></dt>
-        <dd><a href="#">登录</a></dd>
-        <dd><a href="#">注册</a></dd>
-      </dl>
-      <p class="copyRight">CopyRight © 2015-2016 挑赞网</p>
-    </div>
-    <div class="help">
-      <dl>
-        <dt><span>参与</span></dt>
-        <dd><a href="#">我要挑战</a></dd>
-        <dd><a href="#">在线投稿</a></dd>
-        <dd><a href="#">挑赞原理</a></dd>
-        <dd><a href="#">礼品</a></dd>
-        <dd><a href="#">艺术品</a></dd>
-      </dl>
-      <dl>
-        <dt><span>帮助中心</span></dt>
-        <dd><a href="#">在线问答</a></dd>
-        <dd><a href="#">积分规则</a></dd>
-        <dd><a href="#">佣金规则</a></dd>
-        <dd><a href="#">素材下载</a></dd>
-        <dd><a href="#">质量保证</a></dd>
-        <dd><a href="#">退换说明</a></dd>
-      </dl>
-      <dl>
-        <dt><span>信息</span></dt>
-        <dd><a href="#">关于我们</a></dd>
-        <dd><a href="#">联系我们</a></dd>
-        <dd><a href="#">关注我们</a></dd>
-        <dd><a href="#">招贤纳士</a></dd>
-      </dl>
-      <p class="copyRight">All Rights Reserved.版权所有 挑赞网</p>
+    <div class="wrap">
+      <div class="user">
+        <dl>
+          <dt><span>用户</span></dt>
+          <dd><a href="javascript:void(0)" class="login">登录</a></dd>
+          <dd><a href="javascript:void(0)" class="reg">注册</a></dd>
+        </dl>
+        <p class="copyRight">CopyRight © 2015-2016 挑赞网</p>
+      </div>
+      <div class="help">
+        <dl>
+          <dt><span>购买</span></dt>
+          <dd><a href="#">男士</a></dd>
+          <dd><a href="#">女士</a></dd>
+          <dd><a href="#">儿童</a></dd>
+          <dd><a href="#">配饰</a></dd>
+          <dd><a href="#">家居</a></dd>
+        </dl>
+        <dl>
+          <dt><span>参与</span></dt>
+          <dd><a href="#">我要挑战</a></dd>
+          <dd><a href="#">在线投稿</a></dd>
+          <dd><a href="#">挑赞原理</a></dd>
+          <dd><a href="#">礼品</a></dd>
+          <dd><a href="#">艺术品</a></dd>
+        </dl>
+        <dl>
+          <dt><span>帮助中心</span></dt>
+          <dd><a href="#">在线问答</a></dd>
+          <dd><a href="#">积分规则</a></dd>
+          <dd><a href="#">佣金规则</a></dd>
+          <dd><a href="#">素材下载</a></dd>
+          <dd><a href="#">质量保证</a></dd>
+          <dd><a href="#">退换说明</a></dd>
+        </dl>
+        <dl>
+          <dt><span>信息</span></dt>
+          <dd><a href="#">关于我们</a></dd>
+          <dd><a href="#">联系我们</a></dd>
+          <dd><a href="#">关注我们</a></dd>
+          <dd><a href="#">招贤纳士</a></dd>
+        </dl>
+        <p class="copyRight">All Rights Reserved.版权所有 挑赞网</p>
+      </div>
     </div>
   </div>
-</div>
+
+  <div id="regBox" class="homeForm hide">
+    <h3>注册</h3>
+    <p class="tips">欢迎您加入挑赞的大家庭，创建一个属于您自己的专属账号</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="用户名">
+        </div>
+        <div class="formline">
+          <input type="password" placeholder="密码">
+        </div>
+        <div class="formline">
+          <input type="text" placeholder="电子邮件">
+        </div>
+        <div class="agree">
+          <span class="agreeCheck">
+            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" /><label for="checkbox-1-1"></label>
+          </span>
+          <span>点击“加入TEEzan”，您同意我们的<a href="#">服务条款</a>和<a href="#">隐私权政策</a></span>
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="注册">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="loginBox" class="homeForm hide">
+    <h3>登录</h3>
+    <p class="tips">欢迎您加入挑赞的大家庭，立即登录开始您的新的旅途</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="用户名">
+        </div>
+        <div class="formline">
+          <input type="password" placeholder="密码">
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="登录">
+        </div>
+        <p class="forgetPsw">如果您忘记了密码？<a href="#">找回密码</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="findPswBox" class="homeForm hide">
+    <h3>找回密码</h3>
+    <p class="tips">忘记了TEEzan的密码，填写信息找回来吧！</p>
+    <div class="con">
+      <form>
+        <div class="formline">
+          <input type="text" placeholder="邮箱">
+          <a href="#" class="getVerCode">获取验证码</a>
+        </div>
+        <div class="formline">
+          <input type="text" placeholder="验证码">
+        </div>
+        <div class="formBtn">
+          <input type="submit" value="提交">
+        </div>
+      </form>
+    </div>
+  </div>
 
 <ul id="template" class="hide">
     <li class="dragCon" rotateval="0">
@@ -439,10 +529,9 @@
   </li>
 </ul>
 
-<!-- <a type="button" id="down_button" target="_blank" onclick="imgPrint()">屏幕截图</a>
+<a type="button" id="down_button" target="_blank" onclick="imgPrint()">屏幕截图</a>
 
-<a href="#" id="btns" target="_blank">download</a> -->
-
+<a href="#" id="btns" download="w3logo">download</a>
 
 <script type="text/javascript">
   $('.typeList').niceScroll({
@@ -456,35 +545,27 @@
   });
 
   function imgPrint(){     //屏幕截图
+    $('#watermarkPic').removeClass('hide');
       html2canvas( $("#uploadWrap") ,{          
-        onrendered : function(canvas) {  
-                var myImage = canvas.toDataURL("image/jpg");  
-                console.log(myImage);
+        onrendered : function(canvas) { 
 
+                var myImage = canvas.toDataURL("image/jpg");  
                 /*myImage = myImage.replace(/^data:image\/(png|jpeg|jpg);base64,/, "")*/
 
-              /* $('#down_button').attr( 'href' , myImage ) ;
-               $('#btns').attr( 'href' , myImage) ;*/
+               /*$('#down_button').attr( 'href' , myImage ) ;*/
+               $('#down_button').attr( 'href' , myImage) ;
                 //将图片上传到服务器
-                $.ajax({  
+                /*$.ajax({  
                     type : "POST",  
                     url : "",  
                     data : {data:myImage},  
                     success : function(data){  
-                        
+                       
                     }  
-                });  
+                }); */ 
             } 
       });
   }
-
-  (function($){
-    $().ready(function(){
-
-     
-    })
-  })(jQuery);
-
 
 
   var upLoadHtml='';  //上传图片
@@ -523,6 +604,8 @@
   }
 
   function allowDrop(ev){
+    var data=ev.dataTransfer.getData("Text");
+    console.log(document.getElementById(data).style.left);
     ev.preventDefault();
   }
 
@@ -537,22 +620,23 @@
     var li = $("#template li").clone();
     var img = li.find("img");
 
+    console.log($(ev.target).html());
+
     img.attr("src", document.getElementById(data).src);
+    /*li.css({
+      'left':$(ev.target).position().left,
+      'top':
+    })*/
 
     $(ev.target).parent('#uploadWrap').append(li);
+
+    
 
     ev.preventDefault();
     ev.stopPropagation();
   }
 
-
-
-
-
 </script>
-
-
-
 
 </body>
 </html>

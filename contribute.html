@@ -13,6 +13,7 @@
   <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
   <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
   <script type="text/javascript" src="plugins/layerAlert/layer.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
 
 </head>
 <body>
@@ -25,10 +26,10 @@
         <a href="#">帮助</a>
       </div>
       <div class="rightInfo">
-        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe674;</i>登录</a><em>|</em>
+        <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe609;</i>登录</a><em>|</em>
         <a href="javascript:void(0)" title="注册" class="reg">注册</a>
-        <a href="#"><i class="icon iconfont message" title="新消息">&#xe605;<span class="newMsg"></span></i></a>
-        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe612;</i></a>
+        <a href="#"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
+        <a href="#"><i class="icon iconfont cart" title="购物车">&#xe61a;</i></a>
       </div>
     </div>
 
@@ -37,10 +38,10 @@
         <div class="logo"><a href="index.html" title="挑赞网"><img src="img/logo.png" alt="挑赞网"></a></div>
         <div class="navList">
           <ul>
-            <li><a href="index.html">购买</a></li>
+            <li><a href="index.html" class="active">购买</a></li>
             <li><a href="#">挑赞</a></li>
-            <li><a href="contribute.html" class="active">投稿</a></li>
-            <li><a href="#">定制</a></li>
+            <li><a href="contribute.html">投稿</a></li>
+            <li><a href="design.html">定制</a></li>
           </ul>
         </div>
         <div class="rightSearch">
@@ -233,12 +234,20 @@
       <div class="user">
         <dl>
           <dt><span>用户</span></dt>
-          <dd><a href="#">登录</a></dd>
-          <dd><a href="#">注册</a></dd>
+          <dd><a href="javascript:void(0)" class="login">登录</a></dd>
+          <dd><a href="javascript:void(0)" class="reg">注册</a></dd>
         </dl>
         <p class="copyRight">CopyRight © 2015-2016 挑赞网</p>
       </div>
       <div class="help">
+        <dl>
+          <dt><span>购买</span></dt>
+          <dd><a href="#">男士</a></dd>
+          <dd><a href="#">女士</a></dd>
+          <dd><a href="#">儿童</a></dd>
+          <dd><a href="#">配饰</a></dd>
+          <dd><a href="#">家居</a></dd>
+        </dl>
         <dl>
           <dt><span>参与</span></dt>
           <dd><a href="#">我要挑战</a></dd>
