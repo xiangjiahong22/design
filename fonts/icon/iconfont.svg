@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Mon Jun 27 14:47:57 2016
+Created by FontForge 20120731 at Tue Jul 12 09:13:02 2016
  By admin
 </metadata>
 <defs>
@@ -16,10 +16,10 @@ Created by FontForge 20120731 at Mon Jun 27 14:47:57 2016
     ascent="896"
     descent="-128"
     x-height="792"
-    bbox="-0.344828 -128 1030.25 896"
+    bbox="-0.344828 -192 1030.25 896"
     underline-thickness="50"
     underline-position="-100"
-    unicode-range="U+0078-E62B"
+    unicode-range="U+0078-E631"
   />
 <missing-glyph horiz-adv-x="374" 
 d="M34 0v682h272v-682h-272zM68 34h204v614h-204v-614z" />
@@ -193,5 +193,17 @@ h-127q-41 0 -70.5 -29.5t-29.5 -70.5v-2q0 -6 1 -14h47q-2 7 -2 14v2q0 22 16 38t38 
 t-16 38.5v2q0 22 16 38t38 16h58q11 26 31 46h-89q-41 0 -70 -29.5t-29 -70.5v-2q0 -42 29 -71t70 -29h128q41 0 70.5 29t29.5 71v2v0zM921 14q-19 142 -125 236q-12 12 -26 -2q-12 -12 2 -26q93 -84 112 -208h37zM925 11h-43l-1 2q-18 124 -111 207q-7 7 -7.5 15.5
 t5.5 14.5q6 7 15 7.5t15 -5.5q107 -95 126 -238zM887 17h31q-20 139 -124 231q-10 10 -22 -2q-10 -10 2 -22q93 -84 113 -207zM388 841zM106 -75q-9 0 -15.5 6t-7.5 15q-2 18 -2 36q0 113 57 210.5t153 150.5q-93 95 -93 228q0 73 31 138.5t88 111.5q7 7 16.5 6t16 -8.5
 t5.5 -17t-9 -15.5q-48 -40 -74.5 -96.5t-26.5 -119t26.5 -119t75.5 -96.5q10 -8 8 -20.5t-14 -18.5q-97 -43 -155 -134t-58 -200q0 -16 1 -32q1 -10 -5 -17t-16 -8h-2z" />
+    <glyph glyph-name="uniE62C" unicode="&#xe62c;" 
+d="M683 -128l-512 512l512 512v-1024z" />
+    <glyph glyph-name="uniE62D" unicode="&#xe62d;" 
+d="M341 896l512 -512l-512 -512v1024z" />
+    <glyph glyph-name="uniE62E" unicode="&#xe62e;" 
+d="M780 384l-536 -447v894z" />
+    <glyph glyph-name="uniE62F" unicode="&#xe62f;" 
+d="M780 831v-894l-536 447z" />
+    <glyph glyph-name="uniE630" unicode="&#xe630;" 
+d="M384 286l409 398l-98 80l-477 -482l506 -474l82 91z" />
+    <glyph glyph-name="uniE631" unicode="&#xe631;" 
+d="M651 294l-409 -398l98 -80l476 482l-505 474l-82 -90z" />
   </font>
 </defs></svg>

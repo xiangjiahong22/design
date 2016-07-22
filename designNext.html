@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>付款</title>
+  <title>定制信息提交</title>
   <meta charset="utf-8">
   <meta name="description" content=""/>
   <meta name="keywords" content=""/>
@@ -14,9 +14,11 @@
   <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
   <script type="text/javascript" src="plugins/layerAlert/layer.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/jQuery.plugins.js"></script>
 
 </head>
 <body>
+
   <div class="header">
     <div class="topBar">
       <div class="leftInfo">
@@ -53,163 +55,160 @@
     </div>
   </div>
 
-  <div class="wrap payment">
-    <div class="left pullLeft">
-      <div class="userTit">
-        <span class="titInfo">
-          <img src="img/paysureTitIcon.jpg">
-          <span>航运信息</span>
-        </span>
-      </div>
-      <div class="mailTit">
-        收货地址
-      </div> 
-      <div class="userAddrCon">
-        <div class="userAddr active">
-          <div class="nameTop">
-            <span class="name">保罗</span>收件人
-            <span class="handle">
-              <a href="#" class="modify">修改</a>
-              <a href="#">删除</a>
-            </span>
-          </div>
-          <div class="tel">
-            18071751043
-            <span class="zipCode">邮编530076</span>
-          </div>
-          <div class="addr">
-            中国上海浦东新区陆家嘴西路168号 上海华润时代广场
-          </div>
-          <span class="check"><i class="icon iconfont">&#xe611;</i></span>
-        </div>
-        <div class="userAddr">
-          <div class="nameTop">
-            <span class="name">保罗</span>收件人
-            <span class="handle">
-              <a href="#" class="modify">修改</a>
-              <a href="#">删除</a>
-            </span>
-          </div>
-          <div class="tel">
-            18071751043
-            <span class="zipCode">邮编530076</span>
-          </div>
-          <div class="addr">
-            中国上海浦东新区陆家嘴西路168号 上海华润时代广场
-          </div>
-
-        </div>
-      </div>
-      <div class="addAddr">
-        <span class="icon iconfont">&#xe61e;</span>新增收货地址
-      </div>
-      <div class="addAddrCon">
-        <form class="addrForm">
-          <div class="styled-select maxSelect">
-            <select>
-              <option>国家</option>
-              <option>中国</option>
-              <option>美国</option>
-              <option>英国</option>
-              <option>韩国</option>
-              <option>日本</option>
-              <option>斯洛文尼亚</option>
-            </select>
-          </div>
-          <div class="styled-select minSelect">
-            <select>
-              <option>省</option>
-              <option>北京</option>
-              <option>上海</option>
-              <option>湖北</option>
-              <option>湖南</option>
-              <option>河北</option>
-              <option>河南</option>
-              <option>山东</option>
-            </select>
-          </div>
-          <div class="styled-select minSelect">
-            <select>
-              <option>市</option>
-              <option>武汉</option>
-              <option>恩施</option>
-              <option>荆门</option>
-              <option>十堰</option>
-              <option>黄冈</option>
-              <option>宜昌</option>
-            </select>
-          </div>
-          <div class="styled-select minSelect noMargin" >
-            <select>
-              <option>区</option>
-              <option>江岸区</option>
-              <option>江汉区</option>
-              <option>汉阳区</option>
-              <option>武昌区</option>
-              <option>洪山区</option>
-              <option>新洲区</option>
-            </select>
-          </div>
-          <textarea placeholder="填写您的具体地址" class="maxText"></textarea>
-          <div class="addrInp">
-            <input type="text" placeholder="输入您的姓名" class="inp">
-            <input type="text" placeholder="输入您的电话" class="inp noMargin">
-          </div>
-          <div class="sub">
-            <input type="submit" value="保存" class="subBtn">
-          </div>
-        </form>
-      </div>
-
-      <div class="mailTit mailBorder">
-        留言备注
-      </div> 
-      <textarea placeholder="填写您要说明的要求" class="textarea"></textarea>
-      <div class="mailTit">
-        支付方式
-      </div> 
-      <div class="payWay">
-        <img src="img/alipayWay.jpg">
-      </div>
-      <div class="mailTit mailBorder">
-        总金额
-        <span class="pullRight total">
-          ¥250.54
-        </span>
-      </div> 
-      <div class="payBtn">
-        <a href="#">下一步</a>
-      </div>
-    </div>
-    <div class="right pullRight">
-      <div class="userAddr">
-        <div class="nameTop">
-          <span class="name">购物车</span>
-          <span class="pullRight edit"><a href="#">编辑</a></span>
-        </div>
-        <div class="userInfo">
-          <div class="pic pullLeft">
-            <img src="img/userPic.jpg">
-          </div>
-          <div class="userText pullLeft">
-            <p class="name">小蜜蜂蜂蜂蜂</p>
-            <p class="author">有NATHAN派尔</p>
-          </div>
-          <div class="price pullRight">
-            ￥180.00
-          </div>
-        </div>
-        <div class="priceDetails">
-          <p>小计<span class="pullRight">￥183.00</span></p>
-          <p>运输<span class="pullRight">￥10.00</span></p>
-        </div>
-        <div class="total">
-          总金额
-          <span class="btn">￥193.00</span>
-        </div>
-      </div>
-    </div>
+  <div class="wrap designerNext">
     
+  <div class="designForm">
+    <form>
+      <div class="formLine">
+        <span class="tit">订单号：</span>
+        456464435464
+      </div>
+      <div class="formLine">
+        <span class="tit">尺码：</span>
+        <div class="styled-select minSelect">
+          <select>
+            <option>XXS</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+          </select>
+        </div>
+      </div>
+      <div class="formLine">
+        <span class="tit">选择数量：</span>
+        <span class="numHandle">
+          <a href="javascript:void(0)" class="numDeal cartReduce">-</a>
+          <input type="text" value="1" class="numDeal cartInp">
+          <a href="javascript:void(0)" class="numDeal cartIncrease">+</a>
+        </span> 
+      </div>
+      <div class="formLine payment">
+        <span class="tit">联系地址：</span>
+        <div class="userAddrCon">
+          <div class="userAddr active">
+            <div class="nameTop">
+              <span class="name">保罗</span>收件人
+              <span class="handle">
+                <a href="#" class="modify">修改</a>
+                <a href="#">删除</a>
+              </span>
+            </div>
+            <div class="tel">
+              18071751043
+              <span class="zipCode">邮编530076</span>
+            </div>
+            <div class="addr">
+              中国上海浦东新区陆家嘴西路168号 上海华润时代广场
+            </div>
+            <span class="check"><i class="icon iconfont">&#xe611;</i></span>
+          </div>
+        </div>
+        <div class="formLine">
+          <span class="tit"></span>
+          <div class="addAddr">
+            <span class="icon iconfont">&#xe61e;</span>新增收货地址
+          </div>
+        </div>
+        <div class="formLine addAddrWrap hide">
+          <span class="tit">新增地址：</span>
+          <div class="addAddrCon">
+            <form  id="addAddrForm">
+              <div class="styled-select maxSelect">
+                <select>
+                  <option>国家</option>
+                  <option>中国</option>
+                  <option>美国</option>
+                  <option>英国</option>
+                  <option>韩国</option>
+                  <option>日本</option>
+                  <option>斯洛文尼亚</option>
+                </select>
+              </div>
+              <div class="styled-select minSelect">
+                <select>
+                  <option>省</option>
+                  <option>北京</option>
+                  <option>上海</option>
+                  <option>湖北</option>
+                  <option>湖南</option>
+                  <option>河北</option>
+                  <option>河南</option>
+                  <option>山东</option>
+                </select>
+              </div>
+              <div class="styled-select minSelect">
+                <select>
+                  <option>市</option>
+                  <option>武汉</option>
+                  <option>恩施</option>
+                  <option>荆门</option>
+                  <option>十堰</option>
+                  <option>黄冈</option>
+                  <option>宜昌</option>
+                </select>
+              </div>
+              <div class="styled-select minSelect noMargin" >
+                <select>
+                  <option>区</option>
+                  <option>江岸区</option>
+                  <option>江汉区</option>
+                  <option>汉阳区</option>
+                  <option>武昌区</option>
+                  <option>洪山区</option>
+                  <option>新洲区</option>
+                </select>
+              </div>
+              <textarea placeholder="填写您的具体地址" class="maxText"></textarea>
+              <div class="addrInp">
+                <input type="text" placeholder="输入您的电话" class="inp" name="addrTel">
+                <input type="text" placeholder="输入您的邮编" class="inp" name="addrEmail">
+                <input type="text" placeholder="输入收件人" class="inp" name="addrRecipient">
+              </div>
+              <div class="sub addAddrSub">
+                <input type="submit" value="保存" class="subBtn">
+              </div>
+            </div>
+            </form>
+        </div>
+      </div>
+      <div class="formLine">
+        <span class="tit">联系方式：</span>
+        <input class="inp" type="text" placeholder="输入联系方式">
+      </div>
+      <div class="formLine">
+        <span class="tit">最晚完成时间：</span>
+        是否
+      </div>
+      <div class="formLine">
+        <span class="tit">留言：</span>
+        <textarea class="maxText" placeholder="输入您的留言"></textarea>
+      </div>
+      <div class="formLine">
+        <span class="tit">上传高清图片：</span>
+        <span class="uploadMaterial">
+          <input type="file" >
+          <span class="btn">上传</span>
+        </span>
+      </div>
+      <div class="formLine">
+        <span class="tit"></span>
+        <div class="uploadExample">
+          <span>test.ai</span>
+          <span>test.psd</span>
+        </div>
+      </div>
+      <div class="formLine">
+        <div class="sub">
+        <span class="tit"></span>
+          <input type="submit" value="提交" class="subBtn">
+        </div>
+      </div>  
+    </form>
+  </div>    
+   
   </div>
 
   <div class="footer">
@@ -281,7 +280,7 @@
           <span>点击“加入TEEzan”，您同意我们的<a href="#">服务条款</a>和<a href="#">隐私权政策</a></span>
         </div>
         <div class="formBtn">
-          <input type="submit" value="注册">
+          <input type="button" value="注册">
         </div>
       </form>
     </div>
@@ -328,22 +327,28 @@
   <script type="text/javascript">
   (function($){
     $().ready(function(){
+      $('.numHandle').nunDecOrInc();
       //add addr  
       $('.addAddr').on('click',function(){
-        $('.payment .addrForm').toggle();
+        $('.payment .addAddrWrap').toggle();
       })
 
-      $('.userAddr').on('click',function(){
-        $('.userAddrCon .userAddr').removeClass('active');
-        $(this).addClass('active');
-         $('.userAddrCon .userAddr .check').remove();
-         $(this).append('<span class="check"><i class="icon iconfont">&#xe611;</i></span>');
+      $('.addAddrSub input').on('click',function(){ //新增地址form表单 ajax提交
+        /*$.ajax({
+          url: "",
+          type: "get",
+          data: ,
+          success: function(data){
 
+          }
+        });*/
       })
+
 
     })
   })(jQuery);
   </script>
+
 
 </body>
 </html>

@@ -38,8 +38,7 @@
         var diffTop=objValTop-objPosTop;
 
         $(document).on('mousemove',function(e){
-
-         
+      
          _this.css({
             'left':e.pageX-objL-wrapLeft+diffLeft,
             'top':e.pageY-objT-wrapTop+diffTop
@@ -121,6 +120,7 @@
             var diffValY=(scaleMoveY-originalY);
             fontSizeSet=diffValX;
 
+
             obj.parents('.dragCon').css({
               'width':originalPicWidth+diffValX,
               'height':originalPicHeight+diffValY
@@ -159,8 +159,8 @@
           fontSizeSet=diffVal;
 
           obj.parents('.dragCon').css({
-            'width':originalPicWidth+diffVal,
-            'height':originalPicHeight+diffVal
+            'width':originalPicWidth+diffVal/*,
+            'height':originalPicHeight+diffVal*/
           });
         }
         else if(dataIndex=='4'){
@@ -168,11 +168,10 @@
           fontSizeSet=diffVal;
 
           obj.parents('.dragCon').css({
-            'width':originalPicWidth+diffVal,
-            'height':originalPicHeight+diffVal
+            'width':originalPicWidth+diffVal/*,
+            'height':originalPicHeight+diffVal*/
           });
         }
-
        
         obj.parents('.dragCon').find('img').css({
           'width':'100%',
@@ -180,10 +179,22 @@
           'max-width':'2000px',
           'max-height':'2000px'
         });
+      
+        if(obj.parents('.dragCon').attr('data-type')=='text'){
+          if(eval(obj.parents('.dragCon').find('.text').css('font-size').replace('px',''))<=12){
+            obj.parents('.dragCon').find('.text').css({
+              /*'font-size':originalPicWidth+fontSizeSet+'%'*/
+              'font-size':originalPicWidth+fontSizeSet+20+'%'
+            });
+          }else{
+            obj.parents('.dragCon').find('.text').css({
+              /*'font-size':originalPicWidth+fontSizeSet+'%'*/
+              'font-size':originalPicWidth+fontSizeSet+'%'
+            });
+          }
+        }     
 
-        obj.parents('.dragCon').find('.text').css({
-          'font-size':originalPicWidth+fontSizeSet+'%'
-        });
+        
 
       }
 
@@ -286,9 +297,8 @@
 	$('.design .colorPanel .sub').on('click',function(){
 
 		var chooseColor=$('.design .colorPanel li.active a').css('background-color');
-		$('.design .textZone').css('color',chooseColor);
+		$('.design .textZone .inp').css('color',chooseColor);
 		$('.design .fontColor .color').css('background',chooseColor)
-
 		$('.design .text .colorPanel').hide();
 	})
 
@@ -298,10 +308,10 @@
 	})
 
 	$('.design .text .textSubBtn').on('click',function(){
-		var textVal=$('.design .textZone').val();
+		var textVal=$('.design .textZone .inp').val();
     var textColor=$('.design .fontColor .color').css('background-color');
 
-		if($('.design .textZone').val()!=''){
+		if($('.design .textZone .inp').val()!=''){
 			var li=$('#dargText').find('li').clone();
 			li.find('.text').text(textVal);
       li.css({
@@ -311,10 +321,25 @@
 
       });
 			$('#uploadWrap').append(li.prop("outerHTML")); 
-       $('.design .textZone').val('');
+       $('.design .textZone .inp').val('');
 		}
 
 	})
+
+  //reset
+  $('.designOption .reset').on('click',reset);
+
+  //reverse
+  
+  $('.designOption .reverse').on('click',reverse)
+
+  
+  //download
+  $('#down_button').on('click',function(){
+    if($(this).attr('href')=='javascript:void(0)'){
+      alert('请先保存您所定制的产品！');
+    }
+  })
 
   function dragStyleHide(){
     $('.design .dragDot').hide();
@@ -328,6 +353,22 @@
     $('.dragDot',obj).show();
     $('.rotateBtn',obj).show();
     $('.modifyBtn',obj).show();
+  }
+
+  function reset(){
+    $('#uploadWrap li.dragCon').remove()
+  }
+
+  function reverse(){
+    $('#watermarkPic').addClass('hide');
+    if(reverseBtn){
+      $('#uploadWrap .modulePic').attr('src','img/customListRever3.jpg');
+      reverseBtn=false;
+    }else{
+      $('#uploadWrap .modulePic').attr('src','img/customList3.jpg');
+      reverseBtn=true;
+    }
+    
   }
 
   //dragdot

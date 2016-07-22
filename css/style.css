@@ -34,10 +34,10 @@
 .bestList li .price{font-size: 24px;}
 
 
-.homeTit{margin: 10px  0;height: 75px;line-height: 75px;background: #f7af40;color: #000000;font-size: 25px;clear: both;
+.homeTit{margin: 10px  0;height: 75px;line-height: 75px;background: #f7af40;color: #fff;font-size: 25px;clear: both;
 	padding: 0 25px;text-align: center;font-style: italic;}
-.homeTit .rightBtn{display: inline-block;float: right;color: #fff;padding: 10px 15px;border:2px solid #fff;border-radius: 5px;
-	line-height: 19px;margin-top: 17px;}
+.homeTit .rightBtn{display: inline-block;float: right;color: #fff;padding: 6px 10px;border:2px solid #fff;border-radius: 5px;
+	line-height: 19px;margin-top: 22px;font-size: 16px;}
 
 .weekTopic{position: relative;}
 .weekTopic .text{display: inline-block;padding: 5px 32px 8px 32px;border:2px solid #fff;position: absolute;left: 39%;top: 36%;font-size: 30px;
@@ -258,7 +258,9 @@
 .design .left .typeChoose li a img{display: inline-block;animation:0s;}
 .design .left .typeChoose li:last-child{margin-right: 0;}
 .design .left .typeChoose li.active p.icon{
-	background: #ffa800;
+	background: -o-linear-gradient(#fdac00, #ffa300); 
+    background: -moz-linear-gradient(#fdac00, #ffa300); 
+    background: linear-gradient(#fdac00, #ffa300); 
 }
 
 .design .left .typeChoose li a p.icon{width: 77px;height: 70px;overflow: hidden;
@@ -269,7 +271,7 @@
 
 .design .left .typeChoose li.active img{-webkit-transform:translateY(-70px);-moz-transform:translateY(-70px);transform:translateY(-70px)  }
 
-.design .left .typeChoose li a p.text{background: #999999;height: 29px;border-top: 1px solid #cccccc;margin: 0;line-height: 29px;color: #fff}
+.design .left .typeChoose li a p.text{background: #6c6c6c;height: 29px;border-top: 1px solid #cccccc;margin: 0;line-height: 29px;color: #fff}
 
 .design .left .minSelect{width:233px;margin-bottom:26px;height: 37px;}
 .design .left .styled-select select{width:253px;}
@@ -328,12 +330,18 @@
 
 .design .page{margin-top: 10px;border-bottom: 2px solid #231f20;overflow: hidden;padding-bottom: 10px;}
 .design .page .pullLeft{line-height: 34px;}
-.design .page span{display: inline-block;width: 34px;height: 34px;border-radius: 3px;background: #e2e2e2;
-	text-align: center;line-height: 34px;font-size: 15px;color: #231f20;}
+.design .page span,.design .page span .inp{display: inline-block;width: 34px;height: 34px;border-radius: 3px;background: #e2e2e2;
+	text-align: center;line-height: 34px;font-size: 15px;color: #231f20;border:none;}
 .design .page span.flip{cursor: pointer;}
+.design .page span.flip i{color: #5f5f5f;font-size: 18px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none;
+	}
 .design .page span.num{background: #ffc641}
 
-.design .text{margin: 12px 0 15px;position: relative;}
+
+.design .text{margin: 12px 0 15px;position: relative;word-break:break-all; word-wrap:break-word;}
 .design .text .topStyle .styled-select{margin-right: 4px;height: 27px;line-height: 27px;}
 .design .text .topStyle .styled-select select{line-height: 27px;height: 24px;padding: 0 5px;width: 130px;}
 .design .text .topStyle .fontSize select{width: 100px;}
@@ -576,7 +584,7 @@
 .myOrder .orderList .top .orderNo{display: inline-block;line-height: 35px;color: #231f20;padding: 0 15px;border:2px solid #231f20;border-radius: 25px;}
 .myOrder .orderList .top .time{display: inline-block;line-height: 35px;color: #fff;padding: 0 15px;border-radius: 25px;background: #ffc641}
 
-.myOrder .orderList li:hover{background: #fcfcfc}
+/*.myOrder .orderList li:hover{background: #fcfcfc}*/
 .myOrder .orderList table thead{line-height: 62px;font-size: 14px;color: #000000;font-weight: normal;}
 .myOrder .orderList thead th{border-top: 1px solid #e9eaec;border-bottom: 1px solid #e9eaec;text-align: left;padding-left: 15px;}
 .myOrder .orderList thead th:last-child{text-align: right;padding-right: 15px;}
@@ -597,7 +605,7 @@
 /*orderDetails 订单详情*/
 .orderDetails .orderList{margin-top: -40px}
 .orderDetails .orderList tfoot .total{text-align: right;}
-.orderDetails .orderList tfoot .total .num{font-size: 35px;color: #ffc641}
+.orderDetails .orderList tfoot .total .num{font-size: 35px;color: #231f20}
 
 /*payConfirm 付款确认页*/
 .mailTit{font-size: 18px;color: #231f20;line-height: 50px;}
@@ -953,19 +961,26 @@
 	position: absolute;top: 40px;right: 15px;border-radius: 35px;}
 .themeShow a.contributeBtn{top: 108px;background: #ffc641;border-color: #ffc641}
 
+/*designNext 设计下一步*/
+.designerNext{padding: 20px 0;font-size: 14px;color: #6e6e6e}
+.designerNext .formLine{padding: 10px 0;clear: both;overflow: hidden;}
+.designerNext .formLine .tit{display: inline-block;width: 105px;float: left;text-align: right;margin-right: 20px;min-height: 15px;}
+.designerNext .formLine .userAddrCon{max-width: 717px}
+.designerNext .formLine .styled-select{margin: 0;}
+.designerNext .formLine .addAddrCon{float: left;max-width: 600px}
+.designerNext .formline .addAddrCon .styled-select{margin-right: 15px;margin-bottom: 10px;}
+.designerNext .formline .maxText{height: 80px;border:1px solid #dcdcdc;resize:none;margin-bottom: 10px;padding: 10px;
+	width: 596px;border-radius: 3px;}
+.designerNext .formLine .inp{width: 196px;height: 32px;border:1px solid #dcdcdc;padding: 0 10px;border-radius: 3px;}
+.designerNext .formline .addAddr{float: left;width: 590px;}
 
+.uploadMaterial{position: relative;}
+.uploadMaterial .btn{ background: #ffc641 none repeat scroll 0 0;border: medium none;border-radius: 3px;color: #231f20;cursor: pointer;font-size: 12px;margin-top: 17px;min-width: 92px;padding: 8px 10px;}
+.uploadMaterial input{position: absolute;left: 0;top: 0;cursor: pointer;opacity: 0;filter:alpha(opacity=0);}
 
-
-
-
-
-
-
-
-
-
-
-
+.uploadExample{float: left;}
+.uploadExample span{display: inline-block;width: 294px;height: 40px;border:1px solid #ccc;text-align: center;
+	line-height: 40px;float: left;margin-right: 5px;margin-bottom: 10px;}
 
 
 

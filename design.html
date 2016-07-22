@@ -150,20 +150,27 @@
                   <i class="icon iconfont">&#xe625;</i>下载
                 </a>
                 <a href="#"><i class="icon iconfont">&#xe60c;</i>帮助</a>
-                <a href="#"><i class="icon iconfont">&#xe603;</i>重置</a>
+                <a href="javascript:void(0)" class="reset"><i class="icon iconfont">&#xe603;</i>重置</a>
 
-                <a href="#" class="reverse pullRight">查看背面</a>
+                <a href="javascript:void(0)" class="reverse pullRight">正反面切换</a>
                 
               </div>
               <div class="shareBtn">
                 <span class="shareMore">
                   分享&nbsp;&nbsp;
-                  <span class="shareMore">
+                  <!-- <span class="shareMore">
                     <a title="微信" href="#"><i class="icon iconfont wechart"></i></a>
                     <a title="微博" href="#"><i class="icon iconfont microBlog"></i></a>
                     <a title="脸书" href="#"><i class="icon iconfont facebook"></i></a>
                     <a title="推特" href="#"><i class="icon iconfont twitter"></i></a>
-                  </span>
+                  </span> -->
+                  <div class="bdsharebuttonbox">
+                    <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+                    <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+                    <a title="分享到推特" href="#" class="bds_twi" data-cmd="twi"></a>
+                    <a title="分享到脸书" href="#" class="bds_fbook" data-cmd="fbook"></a>
+                  </div>
+
                   <a href="#" class="pullRight nextStep" >下一步</a>
               </div>
             </div>
@@ -205,9 +212,9 @@
       <div class="page">
         <div class="pullLeft">1/66</div>
         <div class="pullRight">
-          <span class="flip prev">12</span>
-          <span class="num">2</span>
-          <span class="flip next">12</span>
+          <span class="flip prev"><i class="icon iconfont" >&lt;</i></span>
+          <span class="num"><input class="inp" type="text" value="1"></span>
+          <span class="flip next"><i class="icon iconfont">&gt;</i></span>
         </div>
       </div>
 
@@ -247,7 +254,7 @@
           <span class="fontColor"><span class="color"></span></span>
         </div>
         <div class="textZone">
-          <input type="text" placeholder="输入文字">
+          <input type="text" placeholder="输入文字" class="inp">
           <a href="javascript:void(0)" class="textSubBtn">确 认</a>
         </div>
         
@@ -376,7 +383,6 @@
         </div>
       </div>
 
-
       
     </div>
   </div>
@@ -384,7 +390,7 @@
 
 </div>
 
-<div class="footer">
+  <div class="footer">
     <div class="wrap">
       <div class="user">
         <dl>
@@ -544,16 +550,31 @@
     autohidemode: false //是否隐藏滚动条
   });
 
+  var designImgVal=[];
+  var reverseBtn=true;  //reverse btn正反面切换btn
+
   function imgPrint(){     //屏幕截图
     $('#watermarkPic').removeClass('hide');
+      
       html2canvas( $("#uploadWrap") ,{          
         onrendered : function(canvas) { 
 
-                var myImage = canvas.toDataURL("image/jpg");  
-                /*myImage = myImage.replace(/^data:image\/(png|jpeg|jpg);base64,/, "")*/
+                  
+                if(reverseBtn){  //正面
+                  var frontImage = canvas.toDataURL("image/jpg");
+                  $('#down_button').attr( 'href' , frontImage) ;
+                  frontImage = frontImage.replace(/^data:image\/(png|jpeg|jpg);base64,/, "")
+                  designImgVal[0]=frontImage;
+                  /*$('#down_button').attr( 'href' , frontImage) ;*/
+                }else{   //反面
+                  var backImage = canvas.toDataURL("image/jpg");
+                  $('#down_button').attr( 'href' , backImage) ;
+                  backImage = backImage.replace(/^data:image\/(png|jpeg|jpg);base64,/, "")
+                  designImgVal[1]=backImage;
+                  /*$('#down_button').attr( 'href' , backImage) ;*/
+                }
 
                /*$('#down_button').attr( 'href' , myImage ) ;*/
-               $('#down_button').attr( 'href' , myImage) ;
                 //将图片上传到服务器
                 /*$.ajax({  
                     type : "POST",  
@@ -605,7 +626,6 @@
 
   function allowDrop(ev){
     var data=ev.dataTransfer.getData("Text");
-    console.log(document.getElementById(data).style.left);
     ev.preventDefault();
   }
 
@@ -620,8 +640,6 @@
     var li = $("#template li").clone();
     var img = li.find("img");
 
-    console.log($(ev.target).html());
-
     img.attr("src", document.getElementById(data).src);
     /*li.css({
       'left':$(ev.target).position().left,
@@ -635,6 +653,22 @@
     ev.preventDefault();
     ev.stopPropagation();
   }
+
+  //share
+  window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+  (function($){
+    $().ready(function(){
+      //nextstep
+      $('.shareBtn .nextstep').on('click',function(){
+        var designImgSub=designImgVal;
+        if(confirm('请确认您所定制的产品正面和反面都分别进行了保存!')){
+          alert(designImgSub);
+        }
+      })
+
+    })
+  })(jQuery);;
 
 </script>
 

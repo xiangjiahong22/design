@@ -72,7 +72,7 @@ a.btnSewt:hover{background: #ffcf5e}
 .nav .navList ul li a:hover{color: #ffc641}
 .nav .rightSearch{float: right;height: 36px;width: 215px;margin-top: 20px;}
 .nav .rightSearch .inp{width: 130px;width: 163px;height: 36px;background: none;border:none;color: #eee;float: left;line-height: 40px;
-  background: #383637;padding: 0 10px;margin-right: 10px;}
+  background: #383637;padding: 0 10px;margin-right: 10px;border-radius: 3px;}
 .nav .rightSearch .sub{width: 36px;height: 36px;float: left;background: url(../img/indexSearch.png) no-repeat center center;border:none;cursor: pointer;}
 
 
@@ -139,11 +139,10 @@ span.date-info-start {
     top: 67%;
 }
 
-
-
-
-
-
+/*share*/
+.bdsharebuttonbox{display: inline-block;}
+.bdsharebuttonbox a, .bdsharebuttonbox .bds_morea{font-size: 16px!important}
+.bdshare-button-style0-24::after{display: inline-block!important;vertical-align: super!important}
 
 
 
