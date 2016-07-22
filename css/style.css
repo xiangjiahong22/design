@@ -79,7 +79,7 @@
 .contributeTit .downloadBtn{display: inline-block;padding: 8px 35px;border:2px solid #2887e1;border-radius: 35px;line-height: 17px;
 	float: right;font-size: 18px;color: #2887e1;margin-top: 27px;}
 .contributeTit .more{border-color: #231f20;color: #231f20;margin-left: 10px;}
-.contributeTit .author{color: #2887e1;margin-left: 20px;}
+.contributeTit .author{color: #333;margin-left: 20px;}
 .productDetails .contributeTit{font-size: 18px;height: 60px;line-height: 60px;margin-bottom: 15px;}
 .longTheme{overflow: hidden;}
 .longTheme .longTheme{float: left;}
@@ -232,7 +232,7 @@
 
 .pastInfo .bot .userIcon{margin-right: 20px;}
 .pastInfo .bot .left h4{font-size: 18px;color: #2887e1;font-weight: normal;margin-bottom: 8px;}
-.pastInfo .bot .left h4{font-size: 18px;color: #2887e1;font-weight: normal;margin-bottom: 8px;}
+.pastInfo .bot .left h4 span{font-size: 16px;}
 .pastInfo .bot .praise{font-size: 18px;color: #000000}
 .pastInfo .bot .praise img{margin-right: 8px;}
 .pastInfo .bot .follow a{display: inline-block;padding: 4px 25px;background: #ffc641;border-radius: 35px;font-size: 15px;
@@ -240,7 +240,8 @@
 .pastInfo .bot .follow a:hover{background: #ffcf5e}
 
 .pastInfo .bot .pastSampleUl{max-width: 170px;margin-left: 15px;font-size: 15px;color: #231f20}
-.pastInfo .bot .pastSampleUl li{word-wrap:break-word;word-break:break-all;line-height: 22px;margin-bottom: 13px;}
+.pastInfo .bot .pastSampleUl li{word-wrap:break-word;word-break:break-all;line-height: 22px;margin-bottom: 5px;}
+.pastInfo .bot .pastSampleUl li a{color: #231f20;}
 
 /*design定制页面*/
 .designWrap{width:1150px;margin:0 auto;padding-bottom: 50px;}
@@ -781,7 +782,7 @@
 .share .shareMore a i.twitter{color: #00aced}
 
 .productCon{margin-bottom: 15px;overflow: hidden;}
-.productCon .rightInfo{width: 340px;font-size: 15px;}
+.productCon .rightInfo{width: 330px;font-size: 15px;}
 .productCon .rightInfo .tit{font-size: 15px;color: #444444;height: 53px;border-top: 2px solid #ffc641;border-bottom: 1px solid #ddddde;
 	line-height: 53px;font-weight: normal;cursor: pointer;
 	-webkit-user-select:none;
@@ -793,8 +794,8 @@
 .productCon .rightInfo .tit i{color: #999;transition:500ms}
 .productCon .rightInfo .sizeInfo h3{line-height: 50px;font-size: 15px;color: #2887e1;font-weight: normal;}
 .rightInfo .worksType{margin-bottom: 10px;}
-.productCon .size a{display: inline-block;width: 44px;height: 44px;line-height: 44px;text-align: center;
-	color: #231f20;background: #f2f2f2;border:1px dotted #dfdfdf;margin-right: 8px;}
+.productCon .size a{display: inline-block;width: 38px;height: 38px;line-height: 38px;text-align: center;
+	color: #231f20;background: #f2f2f2;border:1px dotted #dfdfdf;margin-right: 5px;}
 .productCon .size a.active{background: #ffc641;}
 
 .priNum{margin: 15px 15px 0 15px;color: #231f20;font-size: 13px;}

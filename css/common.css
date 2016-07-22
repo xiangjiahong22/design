@@ -4,7 +4,7 @@ a{text-decoration: none;outline: none;}
 a:hover,a:focus{text-decoration: none;outline: none;border:none;}
 a:visited {text-decoration: none;}
 img{border:0;}
-body,html{font-family: "SingleMaltaRegular Regular","微软雅黑";background: #fff;}
+body,html{font-family: "SingleMaltaRegular Regular","微软雅黑";background: #fff;min-width: 950px;}
 input,textarea{font-family: "SingleMaltaRegular Regular","微软雅黑";font-size: 14px;color: #666}
 input:focus, input:active:focus{outline: none}
 i,em{font-style: normal}
@@ -20,6 +20,16 @@ i,em{font-style: normal}
   font-weight: normal;
   font-style: normal;
 }
+
+/*iconfont*/
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('../fonts/icon/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/icon/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/icon/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/icon/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
 
 .styled-select {
     background: #fff url("../img/selectBg.png") no-repeat scroll 95% center;border: 1px solid #dcdcdc;border-radius: 3px;
@@ -94,7 +104,7 @@ a.btnSewt:hover{background: #ffcf5e}
 .footer .help dl:nth-of-type(4){padding-left: 80px;width: 60px;}
 
 /*翻页*/
-.page{font-size: 12px;margin-bottom: 20px;padding-top: 22px;overflow: hidden;clear: both;}
+.page{font-size: 12px;margin-bottom: 20px;padding-top: 40px;overflow: hidden;clear: both;}
 .page a{color: #777777;display: inline-block;padding: 6px 10px 5px;border: 1px solid #dddddd;float: left;border-left: 0;}
 .page a:hover,.page a:focus{background: #f4f4f4;color: #777777;}
 .page .previous a{border-left: 1px solid #ddd;border-bottom-left-radius: 3px;border-top-left-radius: 3px;padding: 5px 10px 4px}
@@ -144,9 +154,10 @@ span.date-info-start {
 .bdsharebuttonbox a, .bdsharebuttonbox .bds_morea{font-size: 16px!important}
 .bdshare-button-style0-24::after{display: inline-block!important;vertical-align: super!important}
 
-
-
-
+/*goTop*/
+#goTop{position: fixed;right: 50px;bottom: 100px;}
+#goTop a{display: inline-block;width: 60px;height: 47px;text-align: center;background: #ffc641;
+	color: #333;border-radius: 100%;padding-top: 13px;font-size: 14px;}
 
 
 
