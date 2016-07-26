@@ -66,6 +66,7 @@
 
 			var _thisIndex=$(this).parents('.worksType').index();
 			var togPicVal=$('.productCon .leftPic li').eq(_thisIndex+1).find('img').attr('src');
+			var togPicVal=$('.productCon .leftPic li').eq(_thisIndex+1).find('jqimg').attr('src');
 
 			themeWorkTogLeft(togPicVal);
 
@@ -118,6 +119,7 @@
 		function themeWorkTogRight(togPic){
 			$('.productCon .pic .bigTogglePic img').stop(true,true).fadeOut('fast');
 			$('.productCon .pic .bigTogglePic img').attr('src',togPic);
+			$('.productCon .pic .bigTogglePic img').attr('jqimg',togPic);
 			$('.productCon .pic .bigTogglePic img').stop(true,true).fadeIn('fast');
 		}
 
@@ -125,6 +127,7 @@
 		$('.productCon .leftPic ul li').on('click',function(){
 			var _thisIndex=$(this).index();
 			var togPicUrl=$(this).find('img').attr('src');
+			var togPicUrl=$(this).find('jqimg').attr('src');
 
 			$(this).parents('.leftPic').find('li').removeClass('active');
 			$(this).addClass('active');
@@ -133,7 +136,7 @@
 				$(this).parents('.toggle').children('.rightInfo').find('.worksType').eq(_thisIndex-1).find('.tit').trigger('click');
 			}
 			
-			themeWorkTogRight(togPicUrl);
+			(togPicUrl);
 		})
 
 		//newsCenter

@@ -13,8 +13,7 @@ i,em{font-style: normal}
 @font-face {
   font-family: 'SingleMaltaRegular Regular';
   src: url('../fonts/_-webfont.eot');
-  src: url('../fonts/_-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/_-webfont.woff') format('woff'),
+  src: url('../fonts/_-webfont.eot?#iefix') format('embedded-opentype'),   url('../fonts/_-webfont.woff') format('woff'),
    url('../fonts/_-webfont.ttf') format('truetype'),
    url('../fonts/_-webfont.svg#SingleMaltaRegular') format('svg');
   font-weight: normal;
@@ -113,41 +112,14 @@ a.btnSewt:hover{background: #ffcf5e}
 .page a.active{background: #f4f4f4}
 
 /*calander*/
-.calanderBox {
-    display: inline-block;
-    height: 28px;
-    position: relative;
-    width: 175px;
-}
-input.calander {
-    border: 1px solid #b1cbd8;
-    border-radius: 3px;
-    color: #4d4d4d;
-    height: 32px;
-    line-height: 32px;
-    margin: 5px 0;
-    padding: 0 5px;
-    width: 160px;
-}
-#endTime1 {
-    background: rgba(0, 0, 0, 0) url("../img/endTimeBg.png") no-repeat scroll 95% center;
-}
-#begTime1 {
-    background: rgba(0, 0, 0, 0) url("../img/begTimeBg.png") no-repeat scroll 95% center;
-}
-span.date-info-start {
-    background: rgba(0, 0, 0, 0) url("../img/123.png") no-repeat scroll right -108px;
-    color: #a1a1a1;
-    font-size: 12px;
-    height: 15px;
-    line-height: 15px;
-    margin: -10px 0 0;
-    overflow: hidden;
-    padding-right: 25px;
-    position: absolute;
-    right: 5px;
-    top: 67%;
-}
+.calanderBox {display: inline-block;height: 28px;position: relative;width: 175px;}
+input.calander {border: 1px solid #b1cbd8;border-radius: 3px;color: #4d4d4d;height: 32px;line-height: 32px;
+margin: 5px 0;padding: 0 5px;width: 160px;}
+#endTime1 {background: rgba(0, 0, 0, 0) url("../img/endTimeBg.png") no-repeat scroll 95% center;}
+#begTime1 {background: rgba(0, 0, 0, 0) url("../img/begTimeBg.png") no-repeat scroll 95% center;}
+span.date-info-start {background: rgba(0, 0, 0, 0) url("../img/123.png") no-repeat scroll right -108px;
+color: #a1a1a1;font-size: 12px;height: 15px;line-height: 15px;margin: -10px 0 0;overflow: hidden;
+padding-right: 25px;position: absolute;right: 5px;top: 67%;}
 
 /*share*/
 .bdsharebuttonbox{display: inline-block;}
@@ -159,8 +131,14 @@ span.date-info-start {
 #goTop a{display: inline-block;width: 60px;height: 47px;text-align: center;background: #ffc641;
 	color: #333;border-radius: 100%;padding-top: 13px;font-size: 14px;}
 
-
-
+/*jqzoom*/
+.bigTogglePic{position:relative;}
+div.zoomdiv {z-index:999;position: absolute;top:0px;left:0px;width: 200px;
+	height: 200px;background: #ffffff;border:1px solid #eee;display:none;text-align: center;overflow: hidden;}
+div.jqZoomPup {z-index: 999;visibility: hidden;position: absolute;top:0px;left:0px;width : 150px;height : 150px;
+	opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;    filter: alpha(Opacity=50);
+	background: #ffffff url(../img/grid.png) left top  repeat;
+	}
 
 
 

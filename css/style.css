@@ -496,7 +496,7 @@
 /*userCenter userPageSet  主页设置*/
 .userCenter .usePageSet .styled-select{width: 260px;}
 .userCenter .usePageSet .styled-select select{width: 280px;}
-.userCenter .usePageSet .maxText{width: 543px;padding: 10px;resize:none;border:1px solid #e1e1e1;}
+.userCenter .usePageSet .maxText{width: 543px;padding: 10px;resize:none;border:1px solid #e1e1e1;vertical-align: middle;}
 .userCenter .article .uploadHeadPic{overflow: hidden;margin-bottom: 30px;margin-left: 15px;}
 .userCenter .article .uploadBtn{position: relative;margin-left: 30px;}
 .userCenter .article .uploadBtn input{position: absolute;z-index: 9;cursor: pointer;opacity: 0;filter:alpha(opacity=0);
@@ -506,7 +506,8 @@
 .userCenter .formLine .changeTheme input,.userCenter .formLine .changeTheme span{top: -18px}
 .userCenter .article .changeTheme{margin-left: 0}
 .userCenter .article  .uploadText{margin-left: 100px;color: #666666}
-.userCenter .article #themePic{margin-top: 15px;display: inline-block;width: 513px;height: 94px;border:3px solid #faaf40;}
+.userCenter .article #themePic{margin-top: 15px;display: inline-block;width: 513px;height: 94px;border:3px solid #faaf40;
+	overflow: hidden;}
 
 /*help 帮助中心*/
 .helpCenter .aside{float: left;width: 153px;margin: 5px;background: #fafafa;box-shadow: 0 0 5px #eae9ea;margin-bottom: 30px;}
@@ -879,6 +880,13 @@
 
 .themeBtn a{display: inline-block;line-height: 32px;padding: 0 30px;background: #ffc641;border-radius: 30px;
 	font-size: 14px;color: #000!important;margin-top: 25px;}
+	
+.histogramWrap {padding-bottom: 20px!important;padding-top: 20px!important;}
+.histogramWrap ul{padding-left: 35px;overflow: hidden;}
+.histogramWrap li{float: left;width: 23px;margin-right: 2px;height: 100px;position: relative;}
+.histogramWrap li .histogram{display: inline-block;width: 21px;background: #2e8ae2;
+	position: absolute;bottom: 25px;left: 0;}
+.histogramWrap li .num{position: absolute;bottom: 0;width: 21px;text-align: center;font-size: 17px;}
 
 /*worksDetail 作品详情*/
 .worksDetail{padding-bottom: 15px;overflow: hidden;}
