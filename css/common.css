@@ -50,6 +50,7 @@ i,em{font-style: normal}
 .textLeft{text-align: left!important}
 .noFloat{float: none;}
 .noMargin{margin: 0!important}
+.noBorder{border:0!important;}
 
 .wrap{width: 950px;margin: 0 auto;}
 a.btnSewt:hover{background: #ffcf5e}

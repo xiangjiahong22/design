@@ -1000,15 +1000,26 @@
 	line-height: 40px;float: left;margin-right: 5px;margin-bottom: 10px;}
 
 
+/*template 模板页面*/
+.templateList{clear: both;}
+.templateList li{float: left;width: 182px;margin-right: 7px;margin-top: 10px;padding: 10px 0;
+	border:1px solid #dddddd;transition:0.2s;background: #fff;}
+.templateList li:nth-of-type(5n){margin-right: 0;}
+.templateList li:hover{-webkit-transform:translateY(5px);-moz-transform:translateY(5px);transform:translateY(5px);
+	box-shadow: 0 0 3px #dddddd}
+.templateList .name{text-align: center;font-size: 14px;color: #333;line-height: 28px;}
+.templateList .storage{text-align: center;font-size: 13px;color: #999;}
+.templateList .storage .type{margin-left: 5px;}
+.templateList .templateLink img{display: inline-block;max-width: 182px;height: 120px}
+.templateList .templateLink{text-align: center;}
 
+.templateInfo{margin:20px 0 30px;overflow: hidden;}
+.templateInfo .leftText{font-size: 14px;color: #666;width: 500px;margin-top: 30px}
+.templateInfo .leftText h1{font-size: 24px;font-weight: normal;color: #333;}
+.templateInfo .leftText .details{margin: 10px 0;line-height: 22px;text-indent: 2em;}
+.showTempPic{display: inline-block;box-shadow: 0 0 3px #dddddd;margin: 5px}
 
-
-
-
-
-
-
-
+.templateList .contributeTit{margin-bottom: 0}
 
 
 
