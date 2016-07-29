@@ -102,7 +102,6 @@
 				    var bigwidth = $(".bigimg").get(0).offsetWidth;
 
 				    var bigheight = $(".bigimg").get(0).offsetHeight;
-
 				    var scaley ='x';
 
 				    var scalex= 'y';

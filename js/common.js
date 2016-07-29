@@ -66,7 +66,7 @@
 
 			var _thisIndex=$(this).parents('.worksType').index();
 			var togPicVal=$('.productCon .leftPic li').eq(_thisIndex+1).find('img').attr('src');
-			var togPicVal=$('.productCon .leftPic li').eq(_thisIndex+1).find('jqimg').attr('src');
+			var togPicJqVal=$('.productCon .leftPic li').eq(_thisIndex+1).find('img').attr('jqimg');
 
 			themeWorkTogLeft(togPicVal);
 
@@ -75,11 +75,31 @@
 
 		});
 
-		function themeWorkTogLeft(togPic){
-			$('.productCon .pic .bigTogglePic img').stop(true,true).fadeOut('fast');
-			$('.productCon .pic .bigTogglePic img').attr('src',togPic);
-			$('.productCon .pic .bigTogglePic img').stop(true,true).fadeIn('fast');
+		$('.productCon .leftPic ul li').on('click',function(){
+			var objThis=$(this);
+			var _thisIndex=$(this).index();
+			var togPicUrl=$(this).find('img').attr('src');
+			var togPicJqVal=$('.productCon .leftPic li').eq(_thisIndex+1).find('img').attr('jqimg');
 
+			$(this).parents('.leftPic').find('li').removeClass('active');
+			$(this).addClass('active');
+
+			if(_thisIndex>0){
+				$(this).parents('.toggle').children('.rightInfo').find('.worksType').eq(_thisIndex-1).find('.tit').trigger('click');
+			}
+
+			if(_thisIndex>0){
+				themeWorkTogLeft(togPicUrl,objThis);
+			}
+			
+		})
+
+		function themeWorkTogLeft(togPic,obj){
+			$('.productCon .pic .bigTogglePic img').stop(true,true).fadeOut('fast');
+			$(obj).parents('.toggle').find('.bigTogglePic').children('img').attr('src',togPic);
+			$(obj).parents('.toggle').find('.bigTogglePic').children('img').attr('jqimg',togPic);
+			$('.productCon .pic .bigTogglePic img').stop(true,true).fadeIn('fast');
+			console.log('a');
 		}
 
 		$('.worksType .size a').on('click',function(){
@@ -124,27 +144,15 @@
 		}
 
 
-		$('.productCon .leftPic ul li').on('click',function(){
-			var _thisIndex=$(this).index();
-			var togPicUrl=$(this).find('img').attr('src');
-			var togPicUrl=$(this).find('jqimg').attr('src');
-
-			$(this).parents('.leftPic').find('li').removeClass('active');
-			$(this).addClass('active');
-
-			if(_thisIndex>0){
-				$(this).parents('.toggle').children('.rightInfo').find('.worksType').eq(_thisIndex-1).find('.tit').trigger('click');
-			}
-			
-			(togPicUrl);
-		})
+		
 
 		//newsCenter
 		$('.helpCenter .helpCon li h2 .moreIcon').attr('showMore',true);
 		$('.helpCenter .helpCon li h2 .moreIcon').on('click',function(){
+			var _index=$(this).parents('li').index();
 			if(eval($(this).attr('showMore'))){
 				$(this).parent('h2').siblings('p').css({
-					'height':'26px',
+					'height':'auto',
 					'overflow':'hidden'
 				})
 				$(this).css({
@@ -153,9 +161,12 @@
 					'transform':'rotate(0deg)'
 				})
 				$(this).attr('showMore',false);
+				/*$(this).parents('h2').css('color','#7a7a7a');*/
+				
+				
 			}else{
 				$(this).parent('h2').siblings('p').css({
-					'height':'auto'
+					'height':'26px'
 				})
 				$(this).css({
 					'-webkit-transform':'rotate(180deg)',
@@ -164,6 +175,16 @@
 				})
 				$(this).attr('showMore',true);
 			}
+			$(this).parents('h2').css('color','#7a7a7a');
+			$(this).attr('clicked'+_index,true);
+			//利用localstorage设置点击后变色  类似a标签的visited
+			localStorage.setItem('clicked'+(_index),$(this).attr('clicked'+_index));
+		})
+
+
+		//works 评分特效
+		$('.voteScore li').on('click',function(){
+			$(this).addClass('checked');
 		})
 
 		

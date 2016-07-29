@@ -24,12 +24,12 @@
       <div class="leftInfo">
         <a href="javascript:void(0)">简体中文</a><em>|</em>
         <a href="javascript:void(0)">English</a><em>|</em>
-        <a href="#">帮助</a>
+        <a href="help.html">帮助</a>
       </div>
       <div class="rightInfo">
         <a href="javascript:void(0)" title="登录" class="login"><i class="icon iconfont user">&#xe609;</i>登录</a><em>|</em>
         <a href="javascript:void(0)" title="注册" class="reg">注册</a>
-        <a href="#"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
+        <a href="newsCenter.html"><i class="icon iconfont message" title="新消息">&#xe61c;<span class="newMsg"></span></i></a>
         <a href="#"><i class="icon iconfont cart" title="购物车">&#xe61a;</i></a>
       </div>
     </div>
@@ -40,8 +40,8 @@
         <div class="navList">
           <ul>
             <li><a href="index.html" class="active">购买</a></li>
-            <li><a href="#">挑赞</a></li>
-            <li><a href="contribute.html">投稿</a></li>
+            <li><a href="works.html">挑赞</a></li>
+            <li><a href="themeList.html">投稿</a></li>
             <li><a href="design.html">定制</a></li>
           </ul>
         </div>
@@ -72,12 +72,7 @@
       </ul>
     </div>
     <div class="article">
-      <div class="newsTitTog">
-      <a href="javascript:void(0)" class="active">已读</a>
-      <a href="javascript:void(0)">未读</a>
-      </div>
-      <div class="helpCon toggleCon">
-        <div class="toggle">
+      <div class="helpCon ">
           <ul>
             <li>
               <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
@@ -85,35 +80,7 @@
             </li>
             <li>
               <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
-              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
-            </li>
-            <li>
-              <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
-              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
-            </li>
-            <li>
-              <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
-              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
-            </li>
-            <li>
-              <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
-              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
-            </li>
-            <li>
-              <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
-              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
-            </li>
-          </ul>
-        </div>
-        <div class="toggle hide">
-          <ul>
-            <li>
-              <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
-              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
-            </li>
-            <li>
-              <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
-              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
+              <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
             </li>
             <li>
               <h2><span class="icon iconfont email">&#xe61c;</span>系统消息：恭喜您注册成功，请尽快去设置自己的账户！<span class="icon iconfont moreIcon pullRight">&#xe60f;</span></h2>
@@ -136,7 +103,6 @@
               <p>您的 iCloud 储存空间将满。您总计 5 GB 的储存空间还剩 485.6 MB</p>
             </li>
           </ul>
-        </div>
       </div>
       
     </div>
@@ -256,15 +222,16 @@
   </div>
 
   <script type="text/javascript">
-    (function($){
-      $().ready(function(){
-        //toggle hide
-        $('.article .newsTitTog').toggleHide({'parentEleName':'newsTitTog'});
-
-
+  (function($){
+    $().ready(function(){
+      $('.helpCon ul li').each(function(i){
+        if(localStorage.getItem('clicked'+i)){
+          $('h2',$(this)).css('color','#7a7a7a');
+        }
+        
       })
-    })(jQuery);
-     
+    })
+  })(jQuery);
   </script>
 
 
