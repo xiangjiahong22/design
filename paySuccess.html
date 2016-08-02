@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/iconfont.css">
 
   <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
   <script type="text/javascript" src="plugins/layerAlert/layer.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
 
@@ -63,105 +64,107 @@
         您还可以查看
       </div>
     </div>
-    <div class="pastTheme">
-    <ul>
-      <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme1.jpg" class="themeLazy" src="img/pastTheme1.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+    
+    <div class="moreWorksList">
+      <ul>
+        <li>
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks1.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme2.jpg" class="themeLazy" src="img/pastTheme2.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks2.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme4.jpg" class="themeLazy" src="img/pastTheme4.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks3.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme5.jpg" class="themeLazy" src="img/pastTheme5.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks4.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme6.jpg" class="themeLazy" src="img/pastTheme6.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks5.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme7.jpg" class="themeLazy" src="img/pastTheme7.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks5.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme8.jpg" class="themeLazy" src="img/pastTheme8.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks4.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme9.jpg" class="themeLazy" src="img/pastTheme9.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks3.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/pastTheme10.jpg" class="themeLazy" src="img/pastTheme10.jpg" style="display: block;">
-            <div class="hoverInfoBox hide">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWorks2.jpg">
+            <div class="hoverInfoBox">
               <div class="con">
-                <p class="check">查看作品</p>
+                <p class="check">查看获奖者</p>
               </div>
             </div>
           </a>
         </li>
         <li>
-          <a href="contributePast.html">
-            <img data-original="img/moreWork.jpg" class="themeLazy" src="img/moreWork.jpg" style="display: block;">
+          <a href="#">
+            <img class="themeLazy" data-original="img/moreWork.jpg">
           </a>
         </li>
-    </ul>
-  </div>
+      </ul>
+    </div>
+
    </div>
 
   </div>
@@ -279,7 +282,21 @@
     </div>
   </div>
 
+  <script type="text/javascript" charset="utf-8">
+  (function($){
+    $().ready(function(){
+
+      $("img.themeLazy").lazyload({
+        placeholder : "img/moreWorksDefault.jpg", 
+        effect: "fadeIn", 
+        threshold: 200
+      });
+
+
+    })
+  })(jQuery);
   
+</script>
 
 
 </body>

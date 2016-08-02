@@ -47,6 +47,7 @@
 .worksList{clear: both;overflow: hidden;}
 .worksList img{float: left;}
 
+
 .custom{overflow: hidden;padding-bottom: 30px;}
 .custom ul li{float: left;margin:5px;}
 .custom ul li img{width: 307px;}
@@ -98,18 +99,19 @@
 .thisTheme .left,.thisTheme .right{float: left;width: 50%;margin-bottom: 25px;}
 .thisTheme .pic,.thisTheme .info{float: left;}
 .thisTheme .pic{margin-right: 25px;}
-.thisTheme dl dt,.thisTheme dl dd{margin-bottom: 26px;font-size: 15px;color: #231f20}
-.thisTheme .btn a{display: inline-block;width: 140px;height: 37px;background: #ffc641;font-size: 15px;color: #231f20;border-radius: 3px;
-	text-align: center;line-height: 37px;}
-.thisTheme .btn a:hover{background: #ffd167}
+.thisTheme dl dt,.thisTheme dl dd{margin-bottom: 6px;font-size: 15px;color: #231f20}
+/*.thisTheme .btn a{display: inline-block;width: 140px;height: 37px;background: #ffc641;font-size: 15px;color: #231f20;border-radius: 3px;
+	text-align: center;line-height: 37px;}*/
+.thisTheme .btn a{color: #2887e1}
+.thisTheme .btn a:hover{color: #2887e1}
 .pastTheme{padding-bottom: 50px;overflow: hidden;}
-.pastTheme ul li{float: left;margin-right: 7px;margin-bottom: 10px;overflow: hidden;}
-.pastTheme ul li:nth-of-type(5n){margin-right: 0}
-.pastTheme ul li img{width: 184px;height: 184px;float: left;transition:1s;}
+.pastTheme ul li{float: left;margin-bottom: 10px;overflow: hidden;width: 226px;height: 113px;margin-right: 15px;}
+.pastTheme ul li:nth-of-type(4n){margin-right: 0}
+.pastTheme ul li img{width: 226px;height: 113px;float: left;transition:1s;}
 .pastTheme ul li:hover img{-webkit-transform:scale(1.2);-moz-transform:scale(1.2);transform:scale(1.2);}
 .pastTheme ul li{position: relative;}
 .pastTheme ul li .infoBox{position: absolute;left: 0;top: 0;width: 224px;height: 113px;}
-.pastTheme .hoverInfoBox .con{width: 106px;height: 30px;border:2px solid #ffc641;margin-left: 40px;margin-top: 73px;}
+.pastTheme .hoverInfoBox .con{width: 106px;height: 30px;border:2px solid #ffc641;margin-left: 63px;margin-top: 44px;}
 .pastTheme ul li a{color: #ffc641;font-size: 16px;}
 .pastTheme ul li a:hover .hoverInfoBox{display: block;}
 .pastTheme ul li .check{margin-top: 4px;font-size: 16px;}
@@ -153,7 +155,7 @@
 	color: #231f20;font-size: 18px;text-align: center;line-height: 42px;float: right;margin-top: -15px;}
 .workInfo .rightUserInfo p{margin-top: 30px;font-size: 14px;color: #666464;line-height: 22px;}
 
-.workInfo .pastTheme{padding-bottom: 15px}
+.workInfo .pastTheme{padding-bottom: 15px;clear: both;}
 
 .contributeSub .con{margin-bottom: 50px;}
 .contributeSub .con .line .tit{font-size: 14px;color: #231f20;margin-bottom: 16px;margin-top: 22px;}
@@ -216,6 +218,21 @@
 	color: #231f20;margin-top: 20px;margin-bottom: 20px;}
 .pastTheme .buyBtn:hover{background: #ffcf5e}
 
+.moreWorksList{margin-bottom: 20px;margin-top:15px;overflow: hidden;}
+.moreWorksList ul li{width: 182px;height:182px;margin-right: 10px;margin-bottom: 10px;float: left;overflow: hidden;position: relative;}
+.moreWorksList ul li:nth-of-type(5n){margin-right: 0}
+.moreWorksList ul li img{width: 182px;height:182px;transition:1s;}
+.moreWorksList ul li:hover img{-webkit-transform:scale(1.2);-moz-transform:scale(1.2);transform:scale(1.2);}
+.moreWorksList ul li:hover .hoverInfoBox{display: block;}
+
+.moreWorksList ul li .infoBox{position: absolute;left: 0;top: 0;width: 224px;height: 113px;}
+.moreWorksList ul li .hoverInfoBox{display: none;}
+.moreWorksList ul li .hoverInfoBox .con{width: 106px;height: 30px;border:2px solid #ffc641;margin-left: 40px;margin-top: 79px;}
+.moreWorksList ul li a{color: #ffc641;font-size: 16px;}
+.moreWorksList ul li a:hover .hoverInfoBox{display: block;}
+.moreWorksList ul li .check{margin-top: 4px;font-size: 16px;}
+
+
 .pastInfo{border-bottom: 2px solid #656262;clear: both;margin-bottom: 20px;}
 .pastInfo{overflow: hidden;}
 .pastInfo .top,.pastInfo .bot{overflow: hidden;padding: 30px 0 20px 0}
@@ -240,7 +257,8 @@
 .pastInfo .bot .follow a:hover{background: #ffcf5e}
 
 .pastInfo .bot .pastSampleUl{max-width: 170px;margin-left: 15px;font-size: 15px;color: #231f20}
-.pastInfo .bot .pastSampleUl li{word-wrap:break-word;word-break:break-all;line-height: 22px;margin-bottom: 5px;}
+.pastInfo .bot .pastSampleUl li{word-wrap:break-word;word-break:break-all;line-height: 22px;margin-bottom: 5px;
+	height: auto;}
 .pastInfo .bot .pastSampleUl li a{color: #231f20;}
 
 /*design定制页面*/
@@ -248,7 +266,7 @@
 .design{margin-top:40px;}
 .design .left,.design .center{float: left;}
 .design .left .side{width:233px;padding:22px 15px 15px;background: #fff;box-shadow: 0 0 5px #e3e3e3;margin: 5px 14px 5px 5px;}
-.design .left .rightCon{width:590px;}
+.design .left .rightCon{width:590px;margin-top: 5px;}
 
 .design .left h2{font-size: 18px;color: #231f20;font-weight: normal}
 .design .left .typeChoose{margin:20px 0 18px;overflow:hidden;}
@@ -284,7 +302,7 @@
 .design .left .typeList li:first-child{border-top:1px solid #e2e2e2;}
 
 .design .left .designModule{overflow: hidden}
-.design .left .bot{clear: both;background: #fff;margin-top: 11px;overflow: hidden;padding: 19px 10px;background: #f5f5f5 }
+.design .left .bot{clear: both;background: #fff;margin-top: 6px;overflow: hidden;padding: 19px 10px;background: #f5f5f5 }
 .design .left .designOption .shareBtn{padding-top: 12px;clear: both;}
 .design .left .designOption .shareBtn .nextStep{background: #ffc641;border-color: #ffc641; border-radius: 35px;
     color: #2e2e2e;display: inline-block;font-size: 13px;height: 30px;line-height: 30px;padding: 0 15px;text-align: center;}
@@ -329,7 +347,7 @@
 .design .right .sample li:nth-of-type(3n){margin-right: 0}
 .design .right .sample li img{position: absolute;}
 
-.design .page{margin-top: 10px;border-bottom: 2px solid #231f20;overflow: hidden;padding-bottom: 10px;}
+.design .page{margin-top: -11px;border-bottom: 2px solid #231f20;overflow: hidden;padding-bottom: 10px;}
 .design .page .pullLeft{line-height: 34px;}
 .design .page span,.design .page span .inp{display: inline-block;width: 34px;height: 34px;border-radius: 3px;background: #e2e2e2;
 	text-align: center;line-height: 34px;font-size: 15px;color: #231f20;border:none;}
@@ -575,13 +593,15 @@
 
 /*order我的订单*/
 .myOrder {}
-.myOrder .search{overflow: hidden;margin: 23px 0 40px}
-.myOrder .search .searchBtn{width: 73px;height: 31px;border:1px solid #d7d7d7;border-radius: 3px;cursor: pointer;}
+.myOrder .search{overflow: hidden;margin: 23px 0 0px}
+.myOrder .search .searchBtn{width: 73px;height: 31px;border:1px solid #d7d7d7;border-radius: 3px;cursor: pointer;
+	float: left;margin-top: 6px}
 .myOrder .searchNum{width: 350px;height: 31px;list-style-position: 31px;border:1px solid #d7d7d7;border-radius: 3px;
-	display: inline-block;margin-left: 10px;margin-top: -34px;}
+	display: inline-block;margin-left: 10px;margin-top: 4px;}
 .myOrder .searchNum .inp{width: 310px;float: left;border:none;height: 31px;padding: 0 10px}
 .myOrder .searchNum .sub{width: 40px;background: url(../img/searchBg.jpg) no-repeat center center;height: 31px;border:none;
 	cursor: pointer;}
+.myOrder .search .calanderBox{height: auto;float: left;}
 
 .myOrder .orderList{padding-bottom: 30px;}
 .myOrder .orderList table{width: 100%;}
@@ -619,7 +639,7 @@
 .payConfirm .payWay .way, .payConfirm .payWay .total{float: left;width: 458px;height: 215px;border:1px solid #e9eaec;text-align: center;}
 .payConfirm .payWay .way{margin-right: 28px;padding-top: 50px;height: 165px;}
 .payConfirm .payWay .way p{margin-top: 10px;}
-.payConfirm .payWay .total{font-size: 80px;color: #ffc641;line-height: 230px;}
+.payConfirm .payWay .total{font-size: 80px;color: #333;line-height: 230px;}
 .payBtn a{display: inline-block;float: right;background: #ffc641;font-size: 15px;color: #231f20;
 	line-height: 45px;padding: 0 58px;border-radius: 3px;margin: 30px 0}
 
@@ -645,7 +665,7 @@
 
 .payCondition .price{padding: 17px 33px;width: 392px;height: 180px;}
 .payCondition .price .total{font-size: 18px;border-top: 2px solid #e9eaec;padding-top: 20px;}
-.payCondition .price .total .totalNum{float: right;font-size: 30px;color: #ffc641}
+.payCondition .price .total .totalNum{float: right;font-size: 30px;color: #333;font-weight: bold;}
 .payCondition .price div{margin-bottom: 24px;}
 
 .shoppingCart .nextBtn a{display: inline-block;width: 183px;height: 45px;line-height: 45px;text-align: center;color: #231f20;
@@ -684,7 +704,7 @@
 .payment .payWay{border:2px solid #e9eaec;text-align: center;padding: 50px 0}
 .payment .payWay img{display: inline-block;}
 
-.payment .mailTit .total{font-size: 30px;color: #ffc641}
+.payment .mailTit .total{font-size: 30px;color: #333;font-weight: bold;}
 .payment .mailBorder{border-bottom: 2px solid #231f20;margin-bottom: 20px;margin-top: 5px;}
 .payment .payBtn a{margin-top: 10px;}
 
@@ -799,7 +819,7 @@
 .productCon .rightInfo .sizeInfo h3{line-height: 50px;font-size: 15px;color: #2887e1;font-weight: normal;}
 .rightInfo .worksType{margin-bottom: 10px;}
 .productCon .size a{display: inline-block;width: 38px;height: 38px;line-height: 38px;text-align: center;
-	color: #231f20;background: #f2f2f2;border:1px dotted #dfdfdf;margin-right: 5px;}
+	color: #231f20;background: #f2f2f2;border:1px dotted #dfdfdf;margin-right: 3px;font-size: 15px;}
 .productCon .size a.active{background: #ffc641;}
 
 .priNum{margin: 15px 15px 0 15px;color: #231f20;font-size: 13px;}
@@ -914,6 +934,9 @@
 .recommendWorks li{float: left;margin-left: 23px;margin-bottom: 15px;}
 .rightRecommend h2{padding-left: 23px;}
 .rightRecommend{float: left;width: 300px;}
+
+.commentPic {position: relative;} 
+.commentPic .prizeBefore img{position: absolute;bottom: -5px;left: 5px;} 
 
 /*workRejected 落选作品*/
 .workRejected .worksModule .themeWorks img{width: 750px;height: 745px;}
