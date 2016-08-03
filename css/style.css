@@ -34,7 +34,7 @@
 .bestList li .price{font-size: 24px;}
 
 
-.homeTit{margin: 10px  0;height: 75px;line-height: 75px;background: #f7af40;color: #fff;font-size: 25px;clear: both;
+.homeTit{margin: 10px  0;height: 75px;line-height: 75px;background: #333;color: #fff;font-size: 25px;clear: both;
 	padding: 0 25px;text-align: center;font-style: italic;}
 .homeTit .rightBtn{display: inline-block;float: right;color: #fff;padding: 6px 10px;border:2px solid #fff;border-radius: 5px;
 	line-height: 19px;margin-top: 22px;font-size: 16px;}
